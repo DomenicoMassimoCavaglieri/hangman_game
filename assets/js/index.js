@@ -1,7 +1,15 @@
+//Input: string made up of a list of words without punctuation marks
+let words = "cat dog canary turtle";
+
+//Last index used in the word list for random word
 let wordsListIndex = 0;
-let wordsList = "canary dog cat bart dino";
-let lettersListEvaluation;
-//let rightLetter = "";
+
+//Hidden word
+let hiddenWord;
+
+//List of Letters of hidden word
+let wordLetters;
+
 let attemptLetter = "";
 let strike = 0;
 
@@ -12,11 +20,21 @@ getButton().addEventListener("click", init);
 init();
 
 function init() {
-  //document.getElementsByClassName("keyboard-key").setAttribute("disabled",false);
-  let lettersList = getWordLetters(wordsList);
-  printHiddenWord(lettersList);
+  
+    hiddenWord =  getHiddenWord(words);
+    wordLetters = hiddenWord.split("");
    
-  lettersListEvaluation = lettersList;
+    console.log(words);
+    console.log(hiddenWord);
+    console.log(wordLetters);
+  
+  
+  
+    //document.getElementsByClassName("keyboard-key").setAttribute("disabled",false);
+//   let lettersList = getWordLetters(words);
+//   printHiddenWord(lettersList);
+   
+//   wordLetters = lettersList;
 }
 
 function play(listOfLetters) {
@@ -60,28 +78,6 @@ function printHiddenWord(list) {
   } 
 }
 
-function getWordLetters(listOfWords) {
-  let wordLetters;
-  return wordLetters = getHiddenWord(listOfWords).split("");
-}
-
-function getHiddenWord(listOfWords) {
-  console.log("Global Index is: ", wordsListIndex)
-  let hiddenWord = listOfWords.split(" ");
-  let i = randomIndex(hiddenWord);
-  console.log("New index is: ", i);
-  return hiddenWord[i].toUpperCase();
-}
-
-function randomIndex(list) {
-  let index = Math.floor(Math.random() * list.length);
-  if (index == wordsListIndex) { 
-    index = Math.floor(Math.random() * list.length);  
-  }
-    wordsListIndex = index;  
-    return index;
-}
-
 function getWordContainer() {
   let containerWord = document.getElementById("hidden-word-container");
   return containerWord;
@@ -115,25 +111,25 @@ function getaAttemptLetter(letter) {
 
 document.getElementById("A").addEventListener("click", function () {
   getaAttemptLetter("A");
-  play(lettersListEvaluation);
+  play(wordLetters);
 });
 
 document.getElementById("B").addEventListener("click", function () {
   getaAttemptLetter("B");
-  play(lettersListEvaluation);
+  play(wordLetters);
 });
 
 document.getElementById("C").addEventListener("click", function () {
   getaAttemptLetter("C");
-  play(lettersListEvaluation);
+  play(wordLetters);
 });
 
 document.getElementById("D").addEventListener("click", function () {
   getaAttemptLetter("D");
-  play(lettersListEvaluation);
+  play(wordLetters);
 });
 
 document.getElementById("E").addEventListener("click", function () {
   getaAttemptLetter("E");
-  play(lettersListEvaluation);
+  play(wordLetters);
 });
