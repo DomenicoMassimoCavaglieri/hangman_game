@@ -1,5 +1,5 @@
-let wordListIndex = 0;
-let wordList = "canary dog cat bart dino";
+let wordsListIndex = 0;
+let wordsList = "canary dog cat bart dino";
 let lettersListEvaluation;
 //let rightLetter = "";
 let attemptLetter = "";
@@ -13,7 +13,7 @@ init();
 
 function init() {
   //document.getElementsByClassName("keyboard-key").setAttribute("disabled",false);
-  let lettersList = getWordLetters(wordList);
+  let lettersList = getWordLetters(wordsList);
   printHiddenWord(lettersList);
    
   lettersListEvaluation = lettersList;
@@ -66,7 +66,7 @@ function getWordLetters(listOfWords) {
 }
 
 function getHiddenWord(listOfWords) {
-  console.log("Global Index is: ", wordListIndex)
+  console.log("Global Index is: ", wordsListIndex)
   let hiddenWord = listOfWords.split(" ");
   let i = randomIndex(hiddenWord);
   console.log("New index is: ", i);
@@ -75,10 +75,10 @@ function getHiddenWord(listOfWords) {
 
 function randomIndex(list) {
   let index = Math.floor(Math.random() * list.length);
-  if (index == wordListIndex) { 
+  if (index == wordsListIndex) { 
     index = Math.floor(Math.random() * list.length);  
   }
-    wordListIndex = index;  
+    wordsListIndex = index;  
     return index;
 }
 
