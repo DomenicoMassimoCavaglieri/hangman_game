@@ -1,0 +1,21 @@
+{
+  "name": "hangman_game",
+  "version": "1.0.0",
+  "description": "Hangman Game",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DomenicoMassimoCavaglieri/hangman_game.git"
+  },
+  "keywords": [],
+  "author": "Domenico Massimo Cavaglieri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DomenicoMassimoCavaglieri/hangman_game/issues"
+  },
+  "homepage": "https://github.com/DomenicoMassimoCavaglieri/hangman_game#readme"
+}
