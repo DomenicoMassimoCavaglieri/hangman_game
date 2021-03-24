@@ -28,11 +28,10 @@ function getHiddenWord(stringOfWords) {
 function randomIndex(list) {
     let index = Math.floor(Math.random() * list.length);
     while (index == wordsListIndex) {
-        console.log()
         index = Math.floor(Math.random() * list.length);
     }
     wordsListIndex = index;
-    console.log("the current index is: ", index);
-    console.log("the global index is: ", wordsListIndex);
+    // console.log("the current index is: ", index);
+    // console.log("the global index is: ", wordsListIndex);
     return index;
 }
