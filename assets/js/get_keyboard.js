@@ -1,5 +1,10 @@
 getKeyboard();
 
+//This function intercepts all keys on the keyboard
+function getKeyboardKey() {
+    return document.getElementsByClassName("keyboard-key");
+}
+
 //This function intercepts the keyboard container
 function getkeyboardContainer() {
     return document.getElementById("keyboard-container");
