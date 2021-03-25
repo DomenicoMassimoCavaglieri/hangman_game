@@ -27,7 +27,7 @@ function init() {
 
     printHiddenWord(hiddenWord);
 
-    enableAllKeys()
+    setKeyboardEnabled()
 
     strike = 5;
 
@@ -48,7 +48,7 @@ function play(listOfLetters) {
             LettersGuessForAttempt++;
             if (getLetterGuess().length === getLetter().length) {
                 console.log("Hai vinto...");
-                disableAllKeys()
+                setKeyboardDisabled()
             }
         }
         document.getElementById(attemptLetter).setAttribute("disabled", true);
@@ -58,7 +58,7 @@ function play(listOfLetters) {
         (strike--)
         if (strike === 0) {
             console.log("Hai perso...");
-            disableAllKeys()
+            setKeyboardDisabled()
             
         } else console.log(strike, " more attempts...");
     }
