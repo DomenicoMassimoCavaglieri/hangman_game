@@ -1,5 +1,19 @@
 getKeyboard();
 
+//This function enables all buttons
+function enableAllKeys() {
+    for (key of getKeyboardKey()) {
+        key.removeAttribute("disabled", true);
+    }
+}
+
+//This function disables all buttons
+function disableAllKeys() {
+    for (key of getKeyboardKey()) {
+        key.setAttribute("disabled", true);
+    }
+}
+
 //This function intercepts all keys on the keyboard
 function getKeyboardKey() {
     return document.getElementsByClassName("keyboard-key");
@@ -102,16 +116,6 @@ document.getElementById("N").addEventListener("click", function () {
 
 document.getElementById("O").addEventListener("click", function () {
     getaAttemptLetter("O");
-    play(wordLetters);
-});
-
-document.getElementById("P").addEventListener("click", function () {
-    getaAttemptLetter("P");
-    play(wordLetters);
-});
-
-document.getElementById("P").addEventListener("click", function () {
-    getaAttemptLetter("P");
     play(wordLetters);
 });
 
