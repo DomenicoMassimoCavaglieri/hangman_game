@@ -47,9 +47,9 @@ function play(listOfLetters) {
             getLetter()[i].classList.add("visible");
             LettersGuessForAttempt++;
             if (getLetterGuess().length === getLetter().length) {
-                console.log("Hai vinto...");
+                console.log("Hai vinto!!!");
                 setKeyboardDisabled()
-            }
+            } else console.log(strike, " more attempts...");
         }
         document.getElementById(attemptLetter).setAttribute("disabled", true);
     }
