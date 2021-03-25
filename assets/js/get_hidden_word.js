@@ -1,3 +1,13 @@
+//This function intercepts all letter guess of the hidden word
+function getLetterGuess() {
+    return document.getElementsByClassName("visible");
+}
+
+//This function intercepts all letter of the hidden word
+function getLetter() {
+    return document.getElementsByClassName("letter");
+}
+
 //Given an array of individual letters, print the letters with their own style
 function printHiddenWord(list) {
     getWordContainer().innerHTML = "";
