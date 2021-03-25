@@ -16,10 +16,6 @@ let attemptLetter = "";
 //Attempts failed
 let strike = 5;
 
-//Letters guess
-let lettersGuess = 0;
-
-
 getRefreshWordButton().addEventListener("click", init);
 
 init();
@@ -31,40 +27,44 @@ function init() {
 
     printHiddenWord(hiddenWord);
 
+    enableAllKeys()
 
-    for (key of getKeyboardKey()) {
-        key.removeAttribute("disabled", true);
-    }
-}
+    strike = 5;
 
-//This function intercepts the refresh word button
-function getRefreshWordButton() {
-    return document.getElementById("refresh-word-btn");
+    console.log("Si comincia!")
+    console.log(strike, " Attempts!");
+
 }
 
 //This function manages the game: 
 //it checks if the chosen letter is present, 
 //the score conditions and the status of the keys and hangman
 function play(listOfLetters) {
-    let correctLettersForAttempt = 0;
+    let LettersGuessForAttempt = 0;
     console.log("Attempt Letter:", attemptLetter);
-    for (let i = 0; i < getWordContainer().childNodes.length; i++) {
-        if (getWordContainer().childNodes[i].innerHTML === attemptLetter) {
-            getWordContainer().childNodes[i].classList.add("visible");
-            lettersGuess++;
-            correctLettersForAttempt++;
-            if (lettersGuess === getWordContainer().childNodes.length) {
+    for (let i = 0; i < getLetter().length; i++) {
+        if (getLetter()[i].innerHTML === attemptLetter) {
+            getLetter()[i].classList.add("visible");
+            LettersGuessForAttempt++;
+            if (getLetterGuess().length === getLetter().length) {
                 console.log("Hai vinto...");
+                disableAllKeys()
             }
         }
         document.getElementById(attemptLetter).setAttribute("disabled", true);
-    } if (correctLettersForAttempt == 0) {
+    }
+
+    if (LettersGuessForAttempt == 0) {
         (strike--)
         if (strike === 0) {
             console.log("Hai perso...");
-            for (key of getKeyboardKey()) {
-                key.setAttribute("disabled", true);
-            }
+            disableAllKeys()
+            
         } else console.log(strike, " more attempts...");
     }
+}
+
+//This function intercepts the refresh word button
+function getRefreshWordButton() {
+    return document.getElementById("refresh-word-btn");
 }
