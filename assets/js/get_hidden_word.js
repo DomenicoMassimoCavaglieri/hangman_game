@@ -1,3 +1,10 @@
+//This function sets the word as visible
+function setWordVisible() {
+    for (letter of getLetter()) {
+        letter.classList.add("visible");
+    }
+}
+
 //This function intercepts all letter guess of the hidden word
 function getLetterGuess() {
     return document.getElementsByClassName("visible");

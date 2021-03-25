@@ -58,8 +58,8 @@ function play(listOfLetters) {
         (strike--)
         if (strike === 0) {
             console.log("Hai perso...");
-            setKeyboardDisabled()
-            
+            setKeyboardDisabled();
+            setWordVisible();
         } else console.log(strike, " more attempts...");
     }
 }
