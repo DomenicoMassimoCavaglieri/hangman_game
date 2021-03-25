@@ -31,7 +31,7 @@ function init() {
 
     printHiddenWord(hiddenWord);
 
-     
+
     for (key of getKeyboardKey()) {
         key.removeAttribute("disabled", true);
     }
@@ -65,6 +65,6 @@ function play(listOfLetters) {
             for (key of getKeyboardKey()) {
                 key.setAttribute("disabled", true);
             }
-    } else console.log(strike, " more attempts...");
+        } else console.log(strike, " more attempts...");
     }
 }
