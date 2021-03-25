@@ -9,15 +9,25 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<body>
-    <div id="word-container"></div>
-    <button id="refresh-word-btn">Change the word</button>
-    <div id="keyboard-container">
-
- 
+<body class="flex column">
+    <header id="header">
+        <div id="title-container">
+            <h1 id="title">Hangman</h1>
+        </div>
+    </header>
     
-    <script src="./assets/js/manage_hidden_word.js"></script>        
-    <script src="./assets/js/manage_keyboard.js"></script>        
+        <div id="word-container"></div>
+        <div id="draw-container">
+            <button id="refresh-word-btn">Change word</button>
+        </div>
+        <div id="keyboard-container">
+   
+
+
+
+
+    <script src="./assets/js/manage_hidden_word.js"></script>
+    <script src="./assets/js/manage_keyboard.js"></script>
     <script src="./assets/js/index.js"></script>
 </body>
 

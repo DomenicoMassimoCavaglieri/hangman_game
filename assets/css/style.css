@@ -1,37 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+*{box-sizing: border-box;
+margin: 0;
+}
+
+.flex {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body {
+position: relative;
+background-image: url("../images/paper_2.png");
+background-position: -90px 190px;
+font-size: 10px;
+color: #333333;
+width: 100vw;
+height: 100vh;
+max-width: 1400px;  
+margin: auto;
+font-family: 'Architects Daughter', cursive; 
+}   
+
+#title-container {
+position: relative;
+text-align: center;
+font-size: 18px;
+}
+
 #word-container {
-    position: relative;
-    background-color: lightblue;
-    width: 700px;
-    height: 100px;
-    padding-left: 5px;
-  }
-  
-  .letter {
-    display: inline-block;
-    width: 50px;
-    height: 70px;
-    margin: 0 10px;
-    text-align: center;
-    font-size: 60px;
-    color: yellow;
-    border-bottom: 5px solid black;
-    /*visibility: hidden;
-    background-color: #cccccc;*/
-  }
-  
-  .visible {
-    color: black;
-    /*visibility: visible;
-    background-color: transparent;*/
-  }
-  
-  #keyboard-container {
-    position: relative;
-    width: 500px;
-    
-  }
-  
-  .keyboard-key {
-    width: 100px;
-    height: 50px;
-  }
+position: relative;
+/*background-color: lightblue;*/
+width: 100%;
+height: auto;
+text-align: center;
+}
+
+.letter {
+display: inline-block;
+width: 30px;
+height: 66px;
+margin: 0 4px;
+text-align: center;
+font-size: 50px;
+color: #ffffff;
+border-bottom: 4px solid black;
+padding-top: 2px;
+}
+
+.visible {
+color: black;
+}
+
+#draw-container {
+position: relative;
+width: 360px;
+height: 170px;
+}
+
+#refresh-word-btn {
+    background-color: #32ebe1;
+    width: 66px;
+    height: 40px;
+    border-radius: 50px;
+    margin: 3px 6px;
+}
+
+#keyboard-container {
+position: relative;
+width: 360px;
+height: 310px;
+text-align: center;
+padding: 0 18px 8px;
+}
+
+.keyboard-key {
+position: relative;
+background-color: #32ebe1;
+width: 66px;
+height: 40px;
+border-radius: 50px;
+color: #000000;
+font-family: 'Architects Daughter', cursive; 
+margin: 1px 5px;
+}
+
+button:disabled { 
+    background-color: #cccccc; 
+    color: #cccccc; 
+} 
