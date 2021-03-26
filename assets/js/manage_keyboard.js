@@ -32,7 +32,7 @@ function getKeyboard() {
         let keyboardKey = document.createElement("button");
         let keyboardKeyTextNode = document.createTextNode(String.fromCharCode(i));
         keyboardKey.appendChild(keyboardKeyTextNode);
-        keyboardKey.classList.add("keyboard-key");
+        keyboardKey.classList.add("keyboard-key", "bg-white","c-blue");
         keyboardKey.setAttribute("id", String.fromCharCode(i))
         keyboardKey.addEventListener("click", function () {
             getaAttemptLetter(String.fromCharCode(i));

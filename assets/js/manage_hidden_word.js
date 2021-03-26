@@ -22,7 +22,7 @@ function printHiddenWord(list) {
         var singleLetterNode = document.createElement("div");
         var singleLetterTextNode = document.createTextNode(letter);
         singleLetterNode.appendChild(singleLetterTextNode);
-        singleLetterNode.classList.add("letter")
+        singleLetterNode.classList.add("letter", "c-blue")
         getWordContainer().appendChild(singleLetterNode)
     }
 }

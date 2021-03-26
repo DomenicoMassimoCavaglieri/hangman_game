@@ -10,87 +10,125 @@ margin: 0;
 
 .column {
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
+.c-blue {
+    color: #0a0191;
+}
+
+.bg-white {
+    background-color: #ffffff;
+    opacity: 0.9;
+}
+
 body {
-position: relative;
-background-image: url("../images/paper_2.png");
-background-position: -90px 190px;
-font-size: 10px;
-color: #333333;
-width: 100vw;
-height: 100vh;
-max-width: 1400px;  
-margin: auto;
-font-family: 'Architects Daughter', cursive; 
+    position: relative;
+    background-image: url("../images/paper_2.png");
+    background-position: -90px 190px;
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    font-family: 'Architects Daughter', cursive; 
+    color: #0a0191;
 }   
 
 #title-container {
-position: relative;
-text-align: center;
-font-size: 18px;
+    position: relative;
+    width: 170px;
+    height:55px;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 18px;
+    border: solid 0.1px #0a0191;
+    border-radius: 3%;
 }
 
 #word-container {
-position: relative;
-/*background-color: lightblue;*/
-width: 100%;
-height: auto;
-text-align: center;
+    position: relative;
+    background-color: transparent;
+    width: auto;
+    height: auto;
+    text-align: center;
 }
 
 .letter {
-display: inline-block;
-width: 30px;
-height: 66px;
-margin: 0 4px;
-text-align: center;
-font-size: 50px;
-color: #ffffff;
-border-bottom: 4px solid black;
-padding-top: 2px;
+    display: inline-block;
+    width: 30px;
+    height: 60px;
+    margin: 0 4px;
+    text-align: center;
+    font-size: 50px;
+    color: transparent;
+    border-bottom: 4px solid #0a0191;
+    padding-top: 2px;
 }
 
 .visible {
-color: black;
+    color: #0a0191;
 }
 
 #draw-container {
-position: relative;
-width: 360px;
-height: 170px;
+    position: relative;
+    width: 360px;
+    height: 170px;
 }
 
 #refresh-word-btn {
-    background-color: #32ebe1;
+    
+    font-family: 'Architects Daughter', cursive; 
     width: 66px;
-    height: 40px;
+    height: 50px;
     border-radius: 50px;
     margin: 3px 6px;
 }
 
 #keyboard-container {
-position: relative;
-width: 360px;
-height: 310px;
-text-align: center;
-padding: 0 18px 8px;
+    position: relative;
+    width: 310px;
+    height: 320px;
+    text-align: center;
 }
 
 .keyboard-key {
-position: relative;
-background-color: #32ebe1;
-width: 66px;
-height: 40px;
-border-radius: 50px;
-color: #000000;
-font-family: 'Architects Daughter', cursive; 
-margin: 1px 5px;
+    position: relative;
+    width: auto;
+    height: auto;
+    border-radius: 50px;
+    font-family: 'Architects Daughter', cursive; 
+    font-size: 38px;
+    margin: 1px 5px;
 }
 
 button:disabled { 
-    background-color: #cccccc; 
-    color: #cccccc; 
+    background-color: #5db0e7; 
+    opacity: 0.7;
+    color: #e7a75d; 
 } 
+
+#win-box {
+    position: absolute;
+    background-color: #65c088;
+    opacity: 0.9;
+    margin-bottom: 60px;
+    width: 270px;
+    height: 330px;
+    z-index: 2;
+    border-radius: 10%;
+    font-size: 55px;
+    font-weight: 900;
+}
+
+#pop-btn {
+    position: relative;
+    background-color: #32ebe1;
+    font-family: 'Architects Daughter', cursive; 
+    font-size: 25px;
+    color: #0a0191;
+    width: 90px;
+    height: 50px;
+    border: 2px solid #ffffff;
+    border-radius: 50px;
+    margin-top: 50px;
+}
