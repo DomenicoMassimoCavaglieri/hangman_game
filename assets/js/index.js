@@ -21,13 +21,14 @@ getRefreshWordButton().addEventListener("click", init);
 init();
 
 function init() {
-
+    
     hiddenWord = getHiddenWord(words);
     wordLetters = hiddenWord.split("");
 
     printHiddenWord(hiddenWord);
 
     setKeyboardEnabled()
+    setRefreshWordButtonEnabled()
 
     strike = 5;
 
@@ -48,7 +49,9 @@ function play(listOfLetters) {
             LettersGuessForAttempt++;
             if (getLetterGuess().length === getLetter().length) {
                 console.log("Hai vinto!!!");
-                setKeyboardDisabled()
+                setKeyboardDisabled();
+                setRefreshWordButtonDisabled();
+                getPopMessage("You Win!", "OK");
             } else console.log(strike, " more attempts...");
         }
         document.getElementById(attemptLetter).setAttribute("disabled", true);
@@ -59,9 +62,20 @@ function play(listOfLetters) {
         if (strike === 0) {
             console.log("Hai perso...");
             setKeyboardDisabled();
+            setRefreshWordButtonDisabled();
             setWordVisible();
+            getPopMessage("You lose...", "OK");
         } else console.log(strike, " more attempts...");
     }
+}
+
+
+function setRefreshWordButtonEnabled() {
+    getRefreshWordButton().removeAttribute("disabled", true);
+}
+
+function setRefreshWordButtonDisabled() {
+    getRefreshWordButton().setAttribute("disabled", true);
 }
 
 //This function intercepts the refresh word button
