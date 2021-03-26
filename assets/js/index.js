@@ -14,14 +14,16 @@ let wordLetters;
 let attemptLetter = "";
 
 //Attempts failed
-let strike = 5;
+let strike = 4;
 
 getRefreshWordButton().addEventListener("click", init);
 
 init();
 
 function init() {
-    
+
+    hideHangPart();
+
     hiddenWord = getHiddenWord(words);
     wordLetters = hiddenWord.split("");
 
@@ -30,7 +32,7 @@ function init() {
     setKeyboardEnabled()
     setRefreshWordButtonEnabled()
 
-    strike = 5;
+    strike = 4;
 
     console.log("Si comincia!")
     console.log(strike, " Attempts!");
@@ -59,13 +61,34 @@ function play(listOfLetters) {
 
     if (LettersGuessForAttempt == 0) {
         (strike--)
-        if (strike === 0) {
-            console.log("Hai perso...");
-            setKeyboardDisabled();
-            setRefreshWordButtonDisabled();
-            setWordVisible();
-            getPopMessage("You lose...", "OK");
-        } else console.log(strike, " more attempts...");
+        switch (strike) {
+            case 0: 
+                console.log("Hai perso...");
+                showHangPart(getHangLegL());
+                showHangPart(getHangLegR());
+                setKeyboardDisabled();
+                setRefreshWordButtonDisabled();
+                setWordVisible();
+                getPopMessage("You lose...", "OK");
+                break;
+            case 1: 
+                console.log(strike, " more attempts...CASE-2");
+                showHangPart(getHangArmL());
+                showHangPart(getHangArmR());
+                break;
+
+            case 2:
+                console.log(strike, " more attempts...CASE-2");
+                showHangPart(getHangBody());
+                break;
+
+            case 3:
+                console.log(strike, " more attempts...CASE-3");
+                showHangPart(getHangHead());
+                break;
+
+        }
+        
     }
 }
 

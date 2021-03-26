@@ -1,4 +1,13 @@
 
+
+function hideHangPart() {
+    if (document.getElementsByClassName("hangman").length > 0) {
+        for (part of document.getElementsByClassName("hangman")) {
+            part.classList.add("hangman-hidden")
+        }
+    }
+}
+
 function showHangPart(element) {
     element.classList.remove("hangman-hidden");
 }
@@ -19,10 +28,10 @@ function getHangArmR() {
     return document.getElementById("arm-r");
 }
 
-function getHanglegL() {
+function getHangLegL() {
     return document.getElementById("leg-l");
 }
 
-function getHanglegR() {
+function getHangLegR() {
     return document.getElementById("leg-r");
 }
