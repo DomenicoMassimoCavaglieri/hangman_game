@@ -1,4 +1,4 @@
-
+//This function generates pop-up messages
 function getPopMessage(message, messageBtn) {
     let messageNode = document.createElement("div");
     let messageTextContainer = document.createElement("div");
@@ -21,7 +21,7 @@ function getPopMessage(message, messageBtn) {
     })
 }
 
-
+//This function makes an element disappear
 function displayNone(element) {
     element.classList.add("display-none");
 }

@@ -13,25 +13,25 @@ function showHangPart(element) {
 }
 
 function getHangHead() {
-    return document.getElementById("head");
+    return document.getElementById("hang-head");
 }
 
 function getHangBody() {
-    return document.getElementById("body");
+    return document.getElementById("hang-body");
 }
 
 function getHangArmL() {
-    return document.getElementById("arm-l");
+    return document.getElementById("hang-arm-l");
 }
 
 function getHangArmR() {
-    return document.getElementById("arm-r");
+    return document.getElementById("hang-arm-r");
 }
 
 function getHangLegL() {
-    return document.getElementById("leg-l");
+    return document.getElementById("hang-leg-l");
 }
 
 function getHangLegR() {
-    return document.getElementById("leg-r");
+    return document.getElementById("hang-leg-r");
 }

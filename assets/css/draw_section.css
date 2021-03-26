@@ -1,0 +1,135 @@
+/*Draw section*/
+#draw-container {
+    position: relative;
+    justify-content:space-between;
+    width: 300px;
+    height: 200px;
+}
+
+#refresh-word-btn {
+    font-family: 'Architects Daughter', cursive; 
+    font-size: 14px;
+    font-weight: 600;
+    width: 66px;
+    height: 50px;
+    border-radius: 50px;
+    margin: 3px 6px;
+}
+
+#draw-group {
+    position: relative;
+    width: 180px;
+    height: 190px;
+}
+
+.gallows {
+    position: absolute;
+    border: 3px solid #0A0191;
+    filter: blur(1px);
+}
+
+#gallow-line-1 {
+  width: 180px;
+  height: 0px;
+  top: 90px;
+  left: -40px;
+  transform: rotate(90deg);  
+}
+  
+#gallow-line-2 {
+  width: 73.67px;
+  height: 0px;
+  top: 180px;
+  left: 20px;    
+}
+  
+#gallow-line-3 {
+  width: 80px;
+  height: 0px;
+  top: 9px;
+  left: 44px;
+  transform: rotate(-2.51deg);
+}
+  
+#gallow-line-4 {
+  width: 35px;
+  height: 0px;
+  top: 25px;  
+  left:100px;  
+  border: 1px solid #0A0191;
+  filter: blur(1px);
+  transform: rotate(90deg);
+}
+
+#gallow-line-5 {
+    width: 12px;
+    height: 25px;
+    top: 40px;  
+    left:112px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    filter: blur(1px);
+}
+
+.hangman {
+    position: absolute;
+    border: 1.5px solid #0A0191;
+    filter: blur(0.5px);
+}
+
+.hangman-hidden {
+    opacity: 0;
+}
+
+#hang-head {
+    background-image: url("../images/hangman_face_3.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 33px;
+    height: 34px;
+    top:42px;
+    left: 100px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+ #hang-body {
+    width: 50px;
+    height: 0px;
+    top:100px;
+    left: 91px;
+    transform: rotate(90deg);
+ }
+
+ #hang-arm-l {
+     width: 26.42px;
+     height: 0px;
+     top: 95px;
+     left: 90px;
+     transform: rotate(150.52deg);
+}
+
+#hang-arm-r {
+    width: 28.3px;
+    height: 0px;
+    top: 96px;
+    left: 115px;
+    transform: rotate(32.01deg);
+}
+
+#hang-leg-l {
+    width: 36.24px;
+    height: 0px;
+    top: 138px;
+    left: 87px;
+    transform: rotate(129.4deg);
+}
+
+#hang-leg-r {
+    width: 38.42px;
+    height: 0px;
+    top: 138px;
+    left: 107px;
+    transform: rotate(51.34deg);
+}
