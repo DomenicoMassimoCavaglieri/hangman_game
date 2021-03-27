@@ -11,9 +11,44 @@ margin: 0;
 
 .column {
     flex-direction: column;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-around {
     justify-content: space-around;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.row-wrap {
+    flex-flow: row wrap;
+}
+
+.col-wrap {
+    flex-flow: column wrap;
+}
+
+.align-between {
+    align-content: space-between;
+}
+
+.items-start {
+    align-items: flex-start;
+}
+
+.items-center {
     align-items: center;
 }
+
+.items-end {
+    align-items: flex-end;
+}
+
 
 .c-blue {
     color: #0a0191;

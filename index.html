@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<body class="flex column">
+<body class="flex column justify-around items-center">
     <header id="header">
         <div id="title-container" class="bg-white">
             <h1 id="title">Hangman</h1>
@@ -17,7 +17,7 @@
     </header>
 
     <div id="word-section"></div>
-    <div id="play-section" class="flex">
+    <div id="play-section" class="flex col-wrap items-end align-between">
         <div id="gallow-container">
             <div id="gallow-line-1" class="gallows"></div>
             <div id="gallow-line-2" class="gallows"></div>
@@ -27,6 +27,14 @@
         </div>
         <div id="hangman-container"></div>
         <button id="refresh-word-btn" class="bg-white c-blue">Change word</button>
+        <div id="score-container">
+            <div id="won-container">
+                <p id="won-text">Won: 1</p>
+            </div>
+            <div id="won-container">
+                <p id="won-text">Lost: 0</p>
+            </div>
+        </div>
     </div>
     <div id="keyboard-section"></div>
 

@@ -1,25 +1,17 @@
-/*Play section*/
 #play-section {
     position: relative;
     justify-content:space-between;
     width: 300px;
     height: 200px;
+    border: solid 1px;
 }
 
-#refresh-word-btn {
-    font-family: 'Architects Daughter', cursive; 
-    font-size: 14px;
-    font-weight: 600;
-    width: 66px;
-    height: 50px;
-    border-radius: 50px;
-    margin: 3px 6px;
-}
-
+/*Gallow container*/
 #gallow-container {
     position: relative;
     width: 180px;
     height: 190px;
+    border: solid 1px;
 }
 
 .gallows {
@@ -71,22 +63,20 @@
     filter: blur(1px);
 }
 
+/*Hangman container*/
 #hangman-container {
     position: absolute;
     top:42px;
     left: 84px;
     width: 70px;
     height: 120px;
-    /* z-index: 3; */
 }
 
 .hangman {
     position: relative;
-    /* position: absolute; */
     border: 1.5px solid #0A0191;
     filter: blur(0.5px);
     margin: auto;
-    /* z-index:4 */
 }
 
 .hangman-hidden {
@@ -99,8 +89,6 @@
     background-size: contain;
     width: 33px;
     height: 34px;
-    /* top:42px;
-    left: 100px; */
     border-radius: 50%;
     box-sizing: border-box;
 }
@@ -109,8 +97,6 @@
     width: 50px;
     height: 0px;
     top: 21px;
-    /* top:100px;
-    left: 91px; */
     transform: rotate(90deg);
  }
 
@@ -119,8 +105,6 @@
      height: 0px;
      top: 10px;
      right: 10px;
-     /* top: 95px;
-     left: 90px; */
      transform: rotate(150.52deg);
 }
 
@@ -129,8 +113,6 @@
     height: 0px;
     top: 7px;
     left: 11px;
-    /* top: 96px;
-    left: 115px; */
     transform: rotate(32.01deg);
 }
 
@@ -139,8 +121,6 @@
     height: 0px;
     top: 49px;
     right: 12px;
-    /* top: 138px;
-    left: 87px; */
     transform: rotate(129.4deg);
 }
 
@@ -149,7 +129,27 @@
     height: 0px;
     top: 48px;
     left: 12px;
-    /* top: 138px;
-    left: 107px; */
     transform: rotate(51.34deg);
+}
+
+/*Refresh Word Button*/
+#refresh-word-btn {
+    position: relative;
+    font-family: 'Architects Daughter', cursive; 
+    font-size: 14px;
+    font-weight: 600;
+    width: 66px;
+    height: 50px;
+    border-radius: 50px;
+    margin: 3px 6px;
+}
+
+#score-container {
+    position: relative;
+    margin-bottom: 40px;
+    width: 80px;
+    height: 70px;
+    font-size: 20px;
+    font-weight: 600;
+    border: solid 1px;
 }
