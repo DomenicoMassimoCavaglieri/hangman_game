@@ -1,5 +1,5 @@
-/*Draw section*/
-#draw-container {
+/*Play section*/
+#play-section {
     position: relative;
     justify-content:space-between;
     width: 300px;
@@ -16,7 +16,7 @@
     margin: 3px 6px;
 }
 
-#draw-group {
+#gallow-container {
     position: relative;
     width: 180px;
     height: 190px;
@@ -71,10 +71,22 @@
     filter: blur(1px);
 }
 
-.hangman {
+#hangman-container {
     position: absolute;
+    top:42px;
+    left: 84px;
+    width: 70px;
+    height: 120px;
+    /* z-index: 3; */
+}
+
+.hangman {
+    position: relative;
+    /* position: absolute; */
     border: 1.5px solid #0A0191;
     filter: blur(0.5px);
+    margin: auto;
+    /* z-index:4 */
 }
 
 .hangman-hidden {
@@ -87,49 +99,57 @@
     background-size: contain;
     width: 33px;
     height: 34px;
-    top:42px;
-    left: 100px;
+    /* top:42px;
+    left: 100px; */
     border-radius: 50%;
     box-sizing: border-box;
-    z-index: 2;
 }
 
  #hang-body {
     width: 50px;
     height: 0px;
-    top:100px;
-    left: 91px;
+    top: 21px;
+    /* top:100px;
+    left: 91px; */
     transform: rotate(90deg);
  }
 
  #hang-arm-l {
      width: 26.42px;
      height: 0px;
-     top: 95px;
-     left: 90px;
+     top: 10px;
+     right: 10px;
+     /* top: 95px;
+     left: 90px; */
      transform: rotate(150.52deg);
 }
 
 #hang-arm-r {
     width: 28.3px;
     height: 0px;
-    top: 96px;
-    left: 115px;
+    top: 7px;
+    left: 11px;
+    /* top: 96px;
+    left: 115px; */
     transform: rotate(32.01deg);
 }
 
 #hang-leg-l {
     width: 36.24px;
     height: 0px;
-    top: 138px;
-    left: 87px;
+    top: 49px;
+    right: 12px;
+    /* top: 138px;
+    left: 87px; */
     transform: rotate(129.4deg);
 }
 
 #hang-leg-r {
     width: 38.42px;
     height: 0px;
-    top: 138px;
-    left: 107px;
+    top: 48px;
+    left: 12px;
+    /* top: 138px;
+    left: 107px; */
     transform: rotate(51.34deg);
 }

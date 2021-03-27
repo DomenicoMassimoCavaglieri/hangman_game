@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
-@import "../css/draw_section.css";
+@import "../css/play_section.css";
 
 *{box-sizing: border-box;
 margin: 0;
@@ -51,7 +51,7 @@ body {
     border-radius: 3%;
 }
 
-#word-container {
+#word-section {
     position: relative;
     background-color: transparent;
     width: auto;
@@ -76,7 +76,7 @@ body {
 }
 
 
-#keyboard-container {
+#keyboard-section {
     position: relative;
     width: 310px;
     height: 250px;

@@ -29,7 +29,7 @@ function printHiddenWord(list) {
 
 //This function intercepts the word container
 function getWordContainer() {
-    let containerWord = document.getElementById("word-container");
+    let containerWord = document.getElementById("word-section");
     return containerWord;
 }
 
