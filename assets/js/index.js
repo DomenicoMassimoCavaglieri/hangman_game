@@ -21,8 +21,8 @@ getRefreshWordButton().addEventListener("click", init);
 init();
 
 function init() {
-
-    hideHangPart();
+    
+    
 
     hiddenWord = getHiddenWord(words);
     wordLetters = hiddenWord.split("");
@@ -33,6 +33,8 @@ function init() {
     setRefreshWordButtonEnabled()
 
     strike = 4;
+
+    hideHangPart();
 
     console.log("Si comincia!")
     console.log(strike, " Attempts!");
@@ -64,8 +66,8 @@ function play(listOfLetters) {
         switch (strike) {
             case 0: 
                 console.log("Hai perso...");
-                showHangPart(getHangLegL());
-                showHangPart(getHangLegR());
+                getHangParts("hang-leg-l");
+                getHangParts("hang-leg-r");
                 setKeyboardDisabled();
                 setRefreshWordButtonDisabled();
                 setWordVisible();
@@ -73,18 +75,18 @@ function play(listOfLetters) {
                 break;
             case 1: 
                 console.log(strike, " more attempts...CASE-2");
-                showHangPart(getHangArmL());
-                showHangPart(getHangArmR());
+                getHangParts("hang-arm-l");
+                getHangParts("hang-arm-r");
                 break;
 
             case 2:
                 console.log(strike, " more attempts...CASE-2");
-                showHangPart(getHangBody());
+                getHangParts("hang-body");
                 break;
 
             case 3:
                 console.log(strike, " more attempts...CASE-3");
-                showHangPart(getHangHead());
+                getHangParts("hang-head");
                 break;
 
         }

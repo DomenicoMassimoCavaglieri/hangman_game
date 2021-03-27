@@ -21,7 +21,7 @@ function getKeyboardKey() {
 
 //This function intercepts the keyboard container
 function getkeyboardContainer() {
-    return document.getElementById("keyboard-container");
+    return document.getElementById("keyboard-section");
 }
 
 //This function generates the keyboard
