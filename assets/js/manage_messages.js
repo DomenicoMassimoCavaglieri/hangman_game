@@ -21,12 +21,12 @@
 
 
 
-function getPopMessage(title, messages) {
+function getPopMessage(idPopMessage, title, messages) {
     let popMessageNode = document.createElement("div");
     let popMessageTitleTextNode = document.createTextNode(title);
     popMessageNode.appendChild(popMessageTitleTextNode);
 
-    popMessageNode.classList.add("pop-box", "pop-box-small", "flex", "column", "justify-around", "items-center");
+    popMessageNode.classList.add("pop-box", "flex", "column", "items-center");
 
 
     for (let i = 0; i < messages.length; i++) {
@@ -43,14 +43,14 @@ function getPopMessage(title, messages) {
         popMessageNode.appendChild(popBtnNode);
     }
 
-    popMessageNode.setAttribute("id", "popMessageNode");
+    popMessageNode.setAttribute("id", idPopMessage);
     document.body.appendChild(popMessageNode);
 
 
 }
 
-function setPopButtonClosePop() {
-    let popMessageNode = document.getElementById("popMessageNode");
+function setPopButtonClosePop(idPopMessage) {
+    let popMessageNode = document.getElementById(idPopMessage);
     let popBtnNode = document.getElementById("pop-btn1");
     popBtnNode.addEventListener("click", function () {
         document.body.removeChild(popMessageNode)

@@ -32,6 +32,8 @@ init();
 
 function init() {
     
+    getPopMessage("pop-box-large", "Choose the topic", popMessagesLarge); 
+
     hiddenWord = getHiddenWord(words);
     wordLetters = hiddenWord.split("");
 
@@ -65,8 +67,8 @@ function play(listOfLetters) {
                 console.log("Hai vinto!!!");
                 setKeyboardDisabled();
                 setRefreshWordButtonDisabled();
-                getPopMessage("You Win!", popMessageSmall);
-                setPopButtonClosePop();
+                getPopMessage("pop-box-small", "You Win!", popMessageSmall);
+                setPopButtonClosePop(pop-box-small);
                 won++;
                 printScore(won, lost);
             } else console.log(strike, " more attempts...");
@@ -84,8 +86,8 @@ function play(listOfLetters) {
                 setKeyboardDisabled();
                 setRefreshWordButtonDisabled();
                 setWordVisible();
-                getPopMessage("You lose...", popMessageSmall);
-                setPopButtonClosePop();
+                getPopMessage("pop-box-small", "You lose...", popMessageSmall);
+                setPopButtonClosePop(pop-box-small);
                 lost++;
                 printScore(won, lost);
                 break;
