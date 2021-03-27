@@ -56,7 +56,7 @@ margin: 0;
 
 .bg-white {
     background-color: #ffffff;
-    opacity: 0.9;
+    opacity: 0.6;
 }
 
 .display-none {
@@ -123,6 +123,7 @@ body {
     width: auto;
     height: auto;
     border-radius: 50px;
+    border: solid 1px #0a0191;
     font-family: 'Architects Daughter', cursive; 
     font-size: 38px;
     margin: 1px 5px;

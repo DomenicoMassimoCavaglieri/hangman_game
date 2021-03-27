@@ -16,14 +16,18 @@ let attemptLetter = "";
 //Attempts failed
 let strike = 4;
 
+
+let won = 0;
+
+
+let lost = 0;
+
 getRefreshWordButton().addEventListener("click", init);
 
 init();
 
 function init() {
     
-    
-
     hiddenWord = getHiddenWord(words);
     wordLetters = hiddenWord.split("");
 
@@ -35,6 +39,8 @@ function init() {
     strike = 4;
 
     hideHangPart();
+
+    printScore(won, lost);
 
     console.log("Si comincia!")
     console.log(strike, " Attempts!");
@@ -56,6 +62,8 @@ function play(listOfLetters) {
                 setKeyboardDisabled();
                 setRefreshWordButtonDisabled();
                 getPopMessage("You Win!", "OK");
+                won++;
+                printScore(won, lost);
             } else console.log(strike, " more attempts...");
         }
         document.getElementById(attemptLetter).setAttribute("disabled", true);
@@ -72,13 +80,14 @@ function play(listOfLetters) {
                 setRefreshWordButtonDisabled();
                 setWordVisible();
                 getPopMessage("You lose...", "OK");
+                lost++;
+                printScore(won, lost);
                 break;
             case 1: 
                 console.log(strike, " more attempts...CASE-2");
                 getHangParts("hang-arm-l");
                 getHangParts("hang-arm-r");
                 break;
-
             case 2:
                 console.log(strike, " more attempts...CASE-2");
                 getHangParts("hang-body");
@@ -88,17 +97,17 @@ function play(listOfLetters) {
                 console.log(strike, " more attempts...CASE-3");
                 getHangParts("hang-head");
                 break;
-
         }
         
     }
 }
 
-
+//This function enables the word refresh key
 function setRefreshWordButtonEnabled() {
     getRefreshWordButton().removeAttribute("disabled", true);
 }
 
+//This function disables the word refresh key
 function setRefreshWordButtonDisabled() {
     getRefreshWordButton().setAttribute("disabled", true);
 }
@@ -106,4 +115,10 @@ function setRefreshWordButtonDisabled() {
 //This function intercepts the refresh word button
 function getRefreshWordButton() {
     return document.getElementById("refresh-word-btn");
+}
+
+//This function print and updates the match result
+function printScore(wonNumber, lostNumber) {
+    document.getElementById("won-text").innerHTML = "Won: " + wonNumber;
+    document.getElementById("lose-text").innerHTML = "Lose: " + lostNumber;
 }

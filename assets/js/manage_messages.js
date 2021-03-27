@@ -6,7 +6,7 @@ function getPopMessage(message, messageBtn) {
     let popBtnNode = document.createElement("button");
     let popBtnTextNode = document.createTextNode(messageBtn);
 
-    messageNode.classList.add("pop-box", "flex", "column");
+    messageNode.classList.add("pop-box", "flex", "column", "justify-around", "items-center");
     popBtnNode.classList.add(("pop-btn"))
 
     messageTextContainer.appendChild(messageTextNode);

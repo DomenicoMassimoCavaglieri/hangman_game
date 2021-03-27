@@ -1,6 +1,6 @@
 //This function deletes all parts of the hanged man present in his container
 function hideHangPart() {
-    while (getHangContainer().hasChildNodes) {
+    while (getHangContainer().hasChildNodes()) {
         getHangContainer().removeChild(getHangContainer().firstChild);
     }
 }
