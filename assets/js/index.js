@@ -114,7 +114,7 @@ function setRefreshWordButtonDisabled() {
 
 //This function intercepts the refresh word button
 function getRefreshWordButton() {
-    return document.getElementById("refresh-word-btn");
+    return document.getElementById("change-word-btn");
 }
 
 //This function print and updates the match result

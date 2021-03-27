@@ -17,7 +17,9 @@
     </header>
 
     <div id="word-section"></div>
-    <div id="play-section" class="flex col-wrap items-end align-between">
+    <div id="play-section" class="flex col-wrap ">
+        <button id="change-word-btn" class="ply-btn bg-white c-blue margin-top">Change word</button>
+        <button id="change-topic-btn" class="ply-btn bg-white c-blue margin-bottom">Change topic</button>
         <div id="gallow-container">
             <div id="gallow-line-1" class="gallows"></div>
             <div id="gallow-line-2" class="gallows"></div>
@@ -26,11 +28,11 @@
             <div id="gallow-line-5" class="gallows"></div>
         </div>
         <div id="hangman-container"></div>
-        <button id="refresh-word-btn" class="bg-white c-blue">Change word</button>
-        <div id="score-container">
+        <div id="score-container" class="margin-top">
             <p id="won-text"></p>
             <p id="lose-text"></p>
         </div>
+        <button id="reset-btn" class="ply-btn bg-white c-blue margin-bottom">Reset</button>        
     </div>
     <div id="keyboard-section"></div>
 

@@ -1,22 +1,22 @@
 //This function generates pop-up messages
 function getPopMessage(message, messageBtn) {
-    let messageNode = document.createElement("div");
+    let popMessageNode = document.createElement("div");
     let messageTextContainer = document.createElement("div");
     let messageTextNode = document.createTextNode(message);
     let popBtnNode = document.createElement("button");
     let popBtnTextNode = document.createTextNode(messageBtn);
 
-    messageNode.classList.add("pop-box", "flex", "column", "justify-around", "items-center");
+    popMessageNode.classList.add("pop-box", "pop-box-small", "flex", "column", "justify-around", "items-center");
     popBtnNode.classList.add(("pop-btn"))
 
     messageTextContainer.appendChild(messageTextNode);
-    messageNode.appendChild(messageTextContainer);
+    popMessageNode.appendChild(messageTextContainer);
     popBtnNode.appendChild(popBtnTextNode);
-    messageNode.appendChild(popBtnNode);
-    document.body.appendChild(messageNode);
+    popMessageNode.appendChild(popBtnNode);
+    document.body.appendChild(popMessageNode);
 
     popBtnNode.addEventListener("click", function () {
-        displayNone(messageNode);
+        displayNone(popMessageNode);
         init();
     })
 }
