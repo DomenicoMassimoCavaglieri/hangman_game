@@ -18,6 +18,10 @@
     justify-content: space-around;
 }
 
+.justify-evenly {
+    justify-content: space-evenly;
+}
+
 .justify-center {
     justify-content: center;
 }
@@ -85,7 +89,7 @@ body {
 
 #title-container {
     position: relative;
-    width: 170px;
+    width: auto;
     height:55px;
     text-align: center;
     text-decoration: underline;
@@ -135,7 +139,7 @@ body {
     border: solid 1px #0a0191;
     font-family: 'Architects Daughter', cursive; 
     font-size: 36px;
-    margin: 1px 3px;
+    margin: 0 1px;
     line-height: 40px;
 }
 

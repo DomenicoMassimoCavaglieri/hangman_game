@@ -22,6 +22,10 @@ let won = 0;
 
 let lost = 0;
 
+let popMessageSmall = ["OK"];
+
+let popMessagesLarge = ["Animals", "Fruits and vegetables", "School Tools"];
+
 getRefreshWordButton().addEventListener("click", init);
 
 init();
@@ -61,7 +65,8 @@ function play(listOfLetters) {
                 console.log("Hai vinto!!!");
                 setKeyboardDisabled();
                 setRefreshWordButtonDisabled();
-                getPopMessage("You Win!", "OK");
+                getPopMessage("You Win!", popMessageSmall);
+                setPopButtonClosePop();
                 won++;
                 printScore(won, lost);
             } else console.log(strike, " more attempts...");
@@ -79,7 +84,8 @@ function play(listOfLetters) {
                 setKeyboardDisabled();
                 setRefreshWordButtonDisabled();
                 setWordVisible();
-                getPopMessage("You lose...", "OK");
+                getPopMessage("You lose...", popMessageSmall);
+                setPopButtonClosePop();
                 lost++;
                 printScore(won, lost);
                 break;
