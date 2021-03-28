@@ -24,6 +24,9 @@ function getChangeTopicButton() {
     document.getElementById("change-topic-btn").addEventListener("click", function () {
         getPopMessage("pop-box-large", "Choose the topic", popMessagesLarge); 
         setPopButtonOnListening("pop-box-large");
+        //Disabled all buttons
+        setKeyboardDisabled();
+        setPlayButtonDisabled();
     });
 }
 
