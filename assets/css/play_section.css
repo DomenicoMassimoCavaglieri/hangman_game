@@ -78,10 +78,6 @@
     margin: auto;
 }
 
-.hangman-hidden {
-    opacity: 0;
-}
-
 #hang-head {
     background-image: url("../images/hangman_face_3.jpg");
     background-repeat: no-repeat;

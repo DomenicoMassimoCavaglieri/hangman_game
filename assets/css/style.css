@@ -79,7 +79,7 @@ button {
 }
 
 button:hover {
-    transform: scale(2); 
+    transform: scale(1.2); 
 }
 
 *{box-sizing: border-box;
@@ -174,7 +174,6 @@ button:disabled {
     color: #ffffff;
     text-shadow: #000000ff 2px 2px 2px;
     /*Animation*/
-    opacity: 1;
     visibility: visibile;
     transition: all .3s;
 }
