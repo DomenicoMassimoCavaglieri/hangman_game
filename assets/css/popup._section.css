@@ -1,0 +1,50 @@
+.pop-box {
+    position: absolute;
+    background-color: #099dd8;
+    opacity: 0.9;
+    z-index: 3;
+    width: 320px;
+    border-radius: 10%;
+    border: 2px solid #0a0191;
+    font-weight: 900;
+    padding: 20px 0;
+    font-weight: 800;
+    color: #ffffff;
+    text-shadow: #000000ff 2px 2px 2px;
+    /*Animation*/
+    visibility: visibile;
+    transition: all .3s;
+}
+
+.animate {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#pop-box-small {
+    margin-bottom: 60px;
+    height: 230px;
+    font-size: 55px;
+}
+
+#pop-box-large {
+    margin-top: 40px;
+    height: 530px;
+    text-align: center;
+    font-size: 40px;
+    line-height: 40px;
+}
+
+.pop-btn {
+    position: relative;
+    background-color: #93f7f2;
+    font-family: 'Architects Daughter', cursive; 
+    font-size: 25px;
+    font-weight: 600;
+    color: #0a0191;
+    width: auto;
+    height: 50px;
+    border: 2px solid #0a0191;
+    border-radius: 50px;
+    margin-top: 35px;
+}
