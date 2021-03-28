@@ -1,41 +1,24 @@
-//This function generates small pop-up messages
-// function getPopMessage(message, messageBtn) {
-//     let popMessageNode = document.createElement("div");
-//     let popMessageTextNode = document.createTextNode(message);
-//     let popBtnNode = document.createElement("button");
-//     let popBtnTextNode = document.createTextNode(messageBtn);
-
-//     popMessageNode.classList.add("pop-box", "pop-box-small", "flex", "column", "justify-around", "items-center");
-//     popBtnNode.classList.add(("pop-btn"))
-
-//     popMessageNode.appendChild(popMessageTextNode);
-//     popBtnNode.appendChild(popBtnTextNode);
-//     popMessageNode.appendChild(popBtnNode);
-//     document.body.appendChild(popMessageNode);
-
-//     popBtnNode.addEventListener("click", function () {
-//         document.body.removeChild(popMessageNode);
-//         init();
-//     })
-// }
-
-
-
-function getPopMessage(idPopMessage, title, messages) {
+//This function generates pop-up messages with title and n button
+//Input:
+//1: Popup message size (CSS id)
+//2: Popup message title (string)
+//3: Popup messege name of each button (array of strings)
+function getPopMessage(idPopMessageSize, title, messages) {
     let popMessageNode = document.createElement("div");
     let popMessageTitleTextNode = document.createTextNode(title);
+    
     popMessageNode.appendChild(popMessageTitleTextNode);
 
     popMessageNode.classList.add("pop-box", "flex", "column", "items-center");
 
-
     for (let i = 0; i < messages.length; i++) {
         let popBtnNode = document.createElement("button");
         let popBtnTextNode = document.createTextNode(messages[i]);
-        let popBtnId = "pop-btn"
-
+        
         popBtnNode.appendChild(popBtnTextNode);
-
+        
+        //This block assigns a progressive id to each button
+        let popBtnId = "pop-btn"
         popBtnNode.classList.add(("pop-btn"))
         popBtnId += i + 1;
         popBtnNode.setAttribute("id", popBtnId);
@@ -43,23 +26,29 @@ function getPopMessage(idPopMessage, title, messages) {
         popMessageNode.appendChild(popBtnNode);
     }
 
-    popMessageNode.setAttribute("id", idPopMessage);
+    popMessageNode.setAttribute("id", idPopMessageSize);
     document.body.appendChild(popMessageNode);
-
-
 }
 
-function setPopButtonClosePop(idPopMessage) {
-    let popMessageNode = document.getElementById(idPopMessage);
-    let popBtnNode = document.getElementById("pop-btn1");
-    popBtnNode.addEventListener("click", function () {
-        document.body.removeChild(popMessageNode)
-        init();
-    })
-}
-
-
-//This function makes an element disappear
-function displayNone(element) {
-    element.classList.add("display-none");
+//This function listens to the button of the popup message
+//and assigns each a specific function
+//Input: Popup message size (CSS id)
+function setPopButtonOnListening(idPopMessageSize) {
+    let popMessageNode = document.getElementById(idPopMessageSize);    
+    let onlyTitleAndOneButton = 2;
+    
+    if (popMessageNode.childNodes.length === onlyTitleAndOneButton) {
+        popMessageNode.childNodes[1].addEventListener("click", function () {
+            init();
+            document.body.removeChild(popMessageNode)
+        });
+    } else {
+        for (let i = 1; i < popMessageNode.childNodes.length; i++) {
+            popMessageNode.childNodes[i].addEventListener("click", function () {
+                topic = i;
+                init();
+                document.body.removeChild(popMessageNode)
+            });
+        }
+    }
 }

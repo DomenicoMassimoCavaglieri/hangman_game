@@ -1,3 +1,14 @@
+
+function getTopic() {
+    switch (topic) {
+        case 1: return animals;
+        case 2: return fruitsAndVagetebles;
+        case 3: return schoolTools;
+        default: return fruitsAndVagetebles;
+    }
+} 
+
+
 //This function sets the word as visible
 function setWordVisible() {
     for (letter of getLetter()) {

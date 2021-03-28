@@ -1,5 +1,10 @@
+
+let topic = 0;
+
 //Input: string made up of a list of words without punctuation marks
-let words = "cat dog canary turtle";
+let animals = "cat dog canary turtle";
+let fruitsAndVagetebles = "banana apple orange";
+let schoolTools = "ruler rubber pen"
 
 //Last index used in the word list for random word
 let wordsListIndex = 0;
@@ -22,19 +27,24 @@ let won = 0;
 
 let lost = 0;
 
+
 let popMessageSmall = ["OK"];
+
 
 let popMessagesLarge = ["Animals", "Fruits and vegetables", "School Tools"];
 
 getRefreshWordButton().addEventListener("click", init);
 
-init();
+//init();
+
+getPopMessage("pop-box-large", "Choose the topic", popMessagesLarge); 
+setPopButtonOnListening("pop-box-large");
+
 
 function init() {
     
-    getPopMessage("pop-box-large", "Choose the topic", popMessagesLarge); 
-
-    hiddenWord = getHiddenWord(words);
+    
+    hiddenWord = getHiddenWord(getTopic());
     wordLetters = hiddenWord.split("");
 
     printHiddenWord(hiddenWord);
@@ -68,7 +78,7 @@ function play(listOfLetters) {
                 setKeyboardDisabled();
                 setRefreshWordButtonDisabled();
                 getPopMessage("pop-box-small", "You Win!", popMessageSmall);
-                setPopButtonClosePop(pop-box-small);
+                setPopButtonOnListening("pop-box-small");
                 won++;
                 printScore(won, lost);
             } else console.log(strike, " more attempts...");
@@ -87,7 +97,7 @@ function play(listOfLetters) {
                 setRefreshWordButtonDisabled();
                 setWordVisible();
                 getPopMessage("pop-box-small", "You lose...", popMessageSmall);
-                setPopButtonClosePop(pop-box-small);
+                setPopButtonOnListening("pop-box-small");
                 lost++;
                 printScore(won, lost);
                 break;
