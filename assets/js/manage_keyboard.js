@@ -1,5 +1,3 @@
-getKeyboard();
-
 //This function enables all buttons
 function setKeyboardEnabled() {
     for (key of getKeyboardKey()) {

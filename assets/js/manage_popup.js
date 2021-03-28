@@ -1,9 +1,8 @@
-//Button text in the small window
+//Button text in the small Popup
 let popMessageSmall = ["OK"];
 
-//Button text in the large window
+//Button text in the large Popup
 let popMessagesLarge = ["Animals", "Fruits and vegetables", "School Tools"];
-
 
 //This function generates pop-up messages with title and n button
 //Input:
