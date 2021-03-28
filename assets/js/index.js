@@ -48,8 +48,8 @@ function init() {
 
     printHiddenWord(hiddenWord);
 
-    setKeyboardEnabled()
-    //setRefreshWordButtonEnabled()
+    setKeyboardEnabled();
+    setPlayButtonEnebled();
 
     strike = 4;
 
@@ -75,7 +75,7 @@ function play(listOfLetters) {
             if (getLetterGuess().length === getLetter().length) {
                 console.log("Hai vinto!!!");
                 setKeyboardDisabled();
-                //setRefreshWordButtonDisabled();
+                setPlayButtonDisabled();
                 getPopMessage("pop-box-small", "You Win!", popMessageSmall);
                 setPopButtonOnListening("pop-box-small");
                 won++;
@@ -93,7 +93,7 @@ function play(listOfLetters) {
                 getHangParts("hang-leg-l");
                 getHangParts("hang-leg-r");
                 setKeyboardDisabled();
-                //setRefreshWordButtonDisabled();
+                setPlayButtonDisabled();
                 setWordVisible();
                 getPopMessage("pop-box-small", "You lose...", popMessageSmall);
                 setPopButtonOnListening("pop-box-small");
@@ -119,15 +119,21 @@ function play(listOfLetters) {
     }
 }
 
-// //This function enables the word refresh key
-// function //setRefreshWordButtonEnabled() {
-//     getRefreshWordButton().removeAttribute("disabled", true);
-// }
+//This function enables the Play section button
+function setPlayButtonEnebled() {
+    let playButton = document.getElementsByClassName("ply-btn");
+    for (button of playButton) {
+        button.removeAttribute("disabled", true);
+    }
+}
 
-// //This function disables the word refresh key
-// function setRefreshWordButtonDisabled() {
-//     getRefreshWordButton().setAttribute("disabled", true);
-// }
+//This function disables the Play section button
+function setPlayButtonDisabled() {
+    let playButton = document.getElementsByClassName("ply-btn");
+    for (button of playButton) {
+        button.setAttribute("disabled", true);
+    }
+}
 
 //This function sets the change word button
 function getChangeWordButton() {
