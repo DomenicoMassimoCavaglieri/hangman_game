@@ -2,7 +2,7 @@
 let popMessageSmall = ["OK"];
 
 //Button text in the large Popup
-let popMessagesLarge = ["Animals", "Fruits and vegetables", "School Tools"];
+let popMessagesLarge = ["Animals", "Fruits and Vegetables", "School Tools", "Part of the House", "In the kitchen"];
 
 //This function generates pop-up messages with title and n button
 //Input:

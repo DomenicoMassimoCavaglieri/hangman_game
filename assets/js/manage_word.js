@@ -1,10 +1,12 @@
-
+//Variable containing the number referring to the topic chosen by the user
 let topic = 0;
 
-//Input: string made up of a list of words without punctuation marks
-let animals = "cat dog canary turtle";
-let fruitsAndVagetebles = "banana apple orange";
-let schoolTools = "ruler rubber pen"
+//Input words: string made up of a list of words without punctuation marks
+let animals = "cat dog canary turtle lion tiger elephant hippo gorilla monkey mouse hamster parrot falcon eagle";
+let fruitsAndVagetebles = "banana apple orange anas pear peach apricot plum melon kiwi pomegranate tomato cucumber lettuce eggplant courgette pumpkin grapes";
+let schoolTools = "ruler rubber pen pencil album notebook sheet compass backpack book marker highlighter glue";
+let partOfTheHouse = "garden living room kitchen bedroom bathroom garage box terrace cellar attic balcony corridor";
+let inTheKitchen = "knife fork plate glass tablecloth oven spoon refrigerator pot pan ladle cup";
 
 //Last index used in the word list for random word
 let wordsListIndex = 0;
@@ -23,6 +25,8 @@ function getTopic() {
         case 1: return animals;
         case 2: return fruitsAndVagetebles;
         case 3: return schoolTools;
+        case 4: return partOfTheHouse;
+        case 5: return inTheKitchen;
         default: return fruitsAndVagetebles;
     }
 } 

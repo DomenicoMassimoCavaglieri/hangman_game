@@ -12,15 +12,17 @@ let lost = 0;
 getPopMessage("pop-box-large", "Choose the topic", popMessagesLarge); 
 setPopButtonOnListening("pop-box-large");
 
-//Enable the keys in the play section
+//The keyboard appears
+getKeyboard();
+
+//Preparation the buttons in the play section
 getChangeWordButton();
 getChangeTopicButton()
 getResetScoredButton()
 
-//The keyboard appears
-getKeyboard();
-
-
+//Disabled all buttons
+setKeyboardDisabled();
+setPlayButtonDisabled();
 
 //This function prepares the start of the game:
 //Prepare the secret word on the screen, 
