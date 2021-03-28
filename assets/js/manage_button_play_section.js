@@ -40,6 +40,6 @@ function getResetScoredButton() {
 function printScore(wonNumber, lostNumber) {
     document.getElementById("won-text").innerHTML = "Won: " + wonNumber;
     document.getElementById("lose-text").innerHTML = "Lose: " + lostNumber;
-    setKeyboardDisabled();
-    setPlayButtonDisabled();
+    // setKeyboardDisabled();
+    // setPlayButtonDisabled();
 }
