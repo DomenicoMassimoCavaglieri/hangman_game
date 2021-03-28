@@ -15,7 +15,7 @@ function getPopMessage(idPopMessageSize, title, messages) {
     
     popMessageNode.appendChild(popMessageTitleTextNode);
 
-    popMessageNode.classList.add("pop-box", "flex", "column", "items-center");
+    popMessageNode.classList.add("pop-box", "flex", "column", "items-center", "animate");
 
     for (let i = 0; i < messages.length; i++) {
         let popBtnNode = document.createElement("button");
@@ -34,6 +34,12 @@ function getPopMessage(idPopMessageSize, title, messages) {
 
     popMessageNode.setAttribute("id", idPopMessageSize);
     document.body.appendChild(popMessageNode);
+
+    setTimeout(
+        function() {
+            popMessageNode.classList.remove("animate");
+        }, 200
+    );
 }
 
 //This function listens to the button of the popup message

@@ -173,6 +173,15 @@ button:disabled {
     font-weight: 800;
     color: #ffffff;
     text-shadow: #000000ff 2px 2px 2px;
+    /*Animation*/
+    opacity: 1;
+    visibility: visibile;
+    transition: all .3s;
+}
+
+.animate {
+    opacity: 0;
+    visibility: hidden;
 }
 
 #pop-box-small {

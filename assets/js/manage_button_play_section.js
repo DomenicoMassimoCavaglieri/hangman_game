@@ -25,8 +25,10 @@ function getChangeTopicButton() {
         getPopMessage("pop-box-large", "Choose the topic", popMessagesLarge); 
         setPopButtonOnListening("pop-box-large");
         //Disabled all buttons
-        setKeyboardDisabled();
-        setPlayButtonDisabled();
+        setTimeout(() => {
+            setKeyboardDisabled();
+            setPlayButtonDisabled();
+        }, 200);
     });
 }
 
