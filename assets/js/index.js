@@ -33,9 +33,9 @@ let popMessageSmall = ["OK"];
 
 let popMessagesLarge = ["Animals", "Fruits and vegetables", "School Tools"];
 
-getRefreshWordButton().addEventListener("click", init);
-
-//init();
+getChangeWordButton();
+getChangeTopicButton()
+getResetScoredButton()
 
 getPopMessage("pop-box-large", "Choose the topic", popMessagesLarge); 
 setPopButtonOnListening("pop-box-large");
@@ -43,14 +43,13 @@ setPopButtonOnListening("pop-box-large");
 
 function init() {
     
-    
     hiddenWord = getHiddenWord(getTopic());
     wordLetters = hiddenWord.split("");
 
     printHiddenWord(hiddenWord);
 
     setKeyboardEnabled()
-    setRefreshWordButtonEnabled()
+    //setRefreshWordButtonEnabled()
 
     strike = 4;
 
@@ -76,7 +75,7 @@ function play(listOfLetters) {
             if (getLetterGuess().length === getLetter().length) {
                 console.log("Hai vinto!!!");
                 setKeyboardDisabled();
-                setRefreshWordButtonDisabled();
+                //setRefreshWordButtonDisabled();
                 getPopMessage("pop-box-small", "You Win!", popMessageSmall);
                 setPopButtonOnListening("pop-box-small");
                 won++;
@@ -94,7 +93,7 @@ function play(listOfLetters) {
                 getHangParts("hang-leg-l");
                 getHangParts("hang-leg-r");
                 setKeyboardDisabled();
-                setRefreshWordButtonDisabled();
+                //setRefreshWordButtonDisabled();
                 setWordVisible();
                 getPopMessage("pop-box-small", "You lose...", popMessageSmall);
                 setPopButtonOnListening("pop-box-small");
@@ -120,19 +119,36 @@ function play(listOfLetters) {
     }
 }
 
-//This function enables the word refresh key
-function setRefreshWordButtonEnabled() {
-    getRefreshWordButton().removeAttribute("disabled", true);
+// //This function enables the word refresh key
+// function //setRefreshWordButtonEnabled() {
+//     getRefreshWordButton().removeAttribute("disabled", true);
+// }
+
+// //This function disables the word refresh key
+// function setRefreshWordButtonDisabled() {
+//     getRefreshWordButton().setAttribute("disabled", true);
+// }
+
+//This function sets the change word button
+function getChangeWordButton() {
+    document.getElementById("change-word-btn").addEventListener("click", init);
 }
 
-//This function disables the word refresh key
-function setRefreshWordButtonDisabled() {
-    getRefreshWordButton().setAttribute("disabled", true);
+//This function sets the change topic button
+function getChangeTopicButton() {
+    document.getElementById("change-topic-btn").addEventListener("click", function () {
+        getPopMessage("pop-box-large", "Choose the topic", popMessagesLarge); 
+        setPopButtonOnListening("pop-box-large");
+    });
 }
 
-//This function intercepts the refresh word button
-function getRefreshWordButton() {
-    return document.getElementById("change-word-btn");
+//This function intercepts the button that resets score 
+function getResetScoredButton() {
+    return document.getElementById("reset-score-btn").addEventListener("click", function () {
+        won = 0;
+        lost = 0;
+        printScore(won, lost);
+    });
 }
 
 //This function print and updates the match result
