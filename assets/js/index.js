@@ -1,47 +1,29 @@
 
-let topic = 0;
-
-//Input: string made up of a list of words without punctuation marks
-let animals = "cat dog canary turtle";
-let fruitsAndVagetebles = "banana apple orange";
-let schoolTools = "ruler rubber pen"
-
-//Last index used in the word list for random word
-let wordsListIndex = 0;
-
-//Hidden word
-let hiddenWord;
-
-//List of Letters of hidden word
-let wordLetters;
-
-//Attempt letter from keyboeard
-let attemptLetter = "";
-
 //Attempts failed
 let strike = 4;
 
-
+//Game won
 let won = 0;
 
-
+//Game lost
 let lost = 0;
 
+//Initial Popup
+getPopMessage("pop-box-large", "Choose the topic", popMessagesLarge); 
+setPopButtonOnListening("pop-box-large");
 
-let popMessageSmall = ["OK"];
-
-
-let popMessagesLarge = ["Animals", "Fruits and vegetables", "School Tools"];
-
+//Enable the keys in the play section
 getChangeWordButton();
 getChangeTopicButton()
 getResetScoredButton()
 
-getPopMessage("pop-box-large", "Choose the topic", popMessagesLarge); 
-setPopButtonOnListening("pop-box-large");
 
 
-function init() {
+//This function prepares the start of the game:
+//Prepare the secret word on the screen, 
+//remove all parts of the hanged man, 
+//enable the keys in the play section
+function gamePreparation() {
     
     hiddenWord = getHiddenWord(getTopic());
     wordLetters = hiddenWord.split("");
@@ -59,7 +41,6 @@ function init() {
 
     console.log("Si comincia!")
     console.log(strike, " Attempts!");
-
 }
 
 //This function manages the game: 
@@ -95,7 +76,7 @@ function play(listOfLetters) {
                 setKeyboardDisabled();
                 setPlayButtonDisabled();
                 setWordVisible();
-                getPopMessage("pop-box-small", "You lose...", popMessageSmall);
+                getPopMessage("pop-box-small", "You lost...", popMessageSmall);
                 setPopButtonOnListening("pop-box-small");
                 lost++;
                 printScore(won, lost);
@@ -137,7 +118,7 @@ function setPlayButtonDisabled() {
 
 //This function sets the change word button
 function getChangeWordButton() {
-    document.getElementById("change-word-btn").addEventListener("click", init);
+    document.getElementById("change-word-btn").addEventListener("click", gamePreparation);
 }
 
 //This function sets the change topic button

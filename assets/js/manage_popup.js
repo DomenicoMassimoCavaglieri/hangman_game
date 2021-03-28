@@ -1,3 +1,10 @@
+//Button text in the small window
+let popMessageSmall = ["OK"];
+
+//Button text in the large window
+let popMessagesLarge = ["Animals", "Fruits and vegetables", "School Tools"];
+
+
 //This function generates pop-up messages with title and n button
 //Input:
 //1: Popup message size (CSS id)
@@ -39,14 +46,14 @@ function setPopButtonOnListening(idPopMessageSize) {
     
     if (popMessageNode.childNodes.length === onlyTitleAndOneButton) {
         popMessageNode.childNodes[1].addEventListener("click", function () {
-            init();
+            gamePreparation();
             document.body.removeChild(popMessageNode)
         });
     } else {
         for (let i = 1; i < popMessageNode.childNodes.length; i++) {
             popMessageNode.childNodes[i].addEventListener("click", function () {
                 topic = i;
-                init();
+                gamePreparation();
                 document.body.removeChild(popMessageNode)
             });
         }

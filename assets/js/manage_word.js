@@ -1,4 +1,23 @@
 
+let topic = 0;
+
+//Input: string made up of a list of words without punctuation marks
+let animals = "cat dog canary turtle";
+let fruitsAndVagetebles = "banana apple orange";
+let schoolTools = "ruler rubber pen"
+
+//Last index used in the word list for random word
+let wordsListIndex = 0;
+
+//Hidden word
+let hiddenWord;
+
+//List of Letters of hidden word
+let wordLetters;
+
+//Attempt letter from keyboeard
+let attemptLetter = "";
+
 function getTopic() {
     switch (topic) {
         case 1: return animals;
