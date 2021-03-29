@@ -150,8 +150,12 @@
     font-weight: 600;
 }
 
-/* @media (min-width: 630px) {
+@media all and (min-width: 640px) and (min-height: 360px) { 
     #play-section {
         margin: 0 0 0 8px;
     }
+}
+
+/* @media (min-width: 630px) {
+    
 } */
