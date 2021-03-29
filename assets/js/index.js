@@ -43,9 +43,6 @@ function gamePreparation() {
     hideHangPart();
 
     printScore(won, lost);
-
-    console.log("Si comincia!")
-    console.log(strike, " Attempts!");
 }
 
 //This function manages the game: 
@@ -53,13 +50,11 @@ function gamePreparation() {
 //the score conditions and the status of the keys and hangman
 function play(listOfLetters) {
     let LettersGuessForAttempt = 0;
-    console.log("Attempt Letter:", attemptLetter);
     for (let i = 0; i < getLetter().length; i++) {
         if (getLetter()[i].innerHTML === attemptLetter) {
             getLetter()[i].classList.add("visible");
             LettersGuessForAttempt++;
             if (getLetterGuess().length === getLetter().length) {
-                console.log("Hai vinto!!!");
                 setKeyboardDisabled();
                 setPlayButtonDisabled();
                 hideHangPart();
@@ -67,7 +62,7 @@ function play(listOfLetters) {
                 setPopButtonOnListening("pop-box-small");
                 won++;
                 printScore(won, lost);
-            } else console.log(strike, " more attempts...");
+            }
         }
         document.getElementById(attemptLetter).setAttribute("disabled", true);
     }
@@ -76,7 +71,6 @@ function play(listOfLetters) {
         (strike--)
         switch (strike) {
             case 0: 
-                console.log("Hai perso...");
                 getHangParts("hang-leg-l");
                 getHangParts("hang-leg-r");
                 setKeyboardDisabled();
@@ -88,17 +82,14 @@ function play(listOfLetters) {
                 printScore(won, lost);
                 break;
             case 1: 
-                console.log(strike, " more attempts...CASE-2");
                 getHangParts("hang-arm-l");
                 getHangParts("hang-arm-r");
                 break;
             case 2:
-                console.log(strike, " more attempts...CASE-2");
                 getHangParts("hang-body");
                 break;
 
             case 3:
-                console.log(strike, " more attempts...CASE-3");
                 getHangParts("hang-head");
                 break;
         }
