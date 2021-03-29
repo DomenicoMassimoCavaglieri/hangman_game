@@ -62,6 +62,7 @@ function play(listOfLetters) {
                 console.log("Hai vinto!!!");
                 setKeyboardDisabled();
                 setPlayButtonDisabled();
+                hideHangPart();
                 getPopMessage("pop-box-small", "You Win!", popMessageSmall);
                 setPopButtonOnListening("pop-box-small");
                 won++;

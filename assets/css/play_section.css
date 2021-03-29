@@ -67,7 +67,7 @@
 #hangman-container {
     position: absolute;
     top:42px;
-    right: 88px;
+    right: 93px;
     width: 70px;
     height: 120px;
 }
@@ -144,7 +144,7 @@
 /*Play section score container*/
 #score-container {
     position: relative;
-    width: 70px;
+    width: 90px;
     height: 70px;
     font-size: 20px;
     font-weight: 600;
@@ -162,7 +162,7 @@
 
     #hangman-container {
         top:42px;
-        right: 75px;
+        right: 79px;
     }
 }
 

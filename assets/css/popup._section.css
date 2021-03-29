@@ -53,9 +53,22 @@
     margin-top: 40px;
 }
 
-@media (min-height: 700px) {
+@media (min-height: 690px) {
     #pop-box-small {
-        margin-top: 8rem;
+        margin-top: 9rem;
     }
 }
 
+@media (min-width: 640px) and (max-height: 360px) {
+    #pop-box-large {
+        display: block;
+        
+    }
+
+    #pop-box-small {
+        width: 330px;
+        /* height: 230px;
+        font-size: 55px; */
+        margin-top: 2rem;
+    }
+}
