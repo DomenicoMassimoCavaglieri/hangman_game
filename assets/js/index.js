@@ -11,7 +11,7 @@ let lost = 0;
 //Initial Popup
 getPopMessage("pop-box-large", "Choose the topic", popMessagesLarge); 
 setPopButtonOnListening("pop-box-large");
-
+ 
 //The keyboard appears
 getKeyboard();
 

@@ -6,7 +6,7 @@ let animals = "cat dog canary turtle lion tiger elephant hippo gorilla monkey mo
 let fruitsAndVagetebles = "banana apple orange anas pear peach apricot plum melon kiwi pomegranate tomato cucumber lettuce eggplant courgette pumpkin grapes";
 let schoolTools = "ruler rubber pen pencil album notebook sheet compass backpack book marker highlighter glue";
 let partOfTheHouse = "garden living room kitchen bedroom bathroom garage box terrace cellar attic balcony corridor";
-let inTheKitchen = "refrigerator refrigerator"; /*knife fork plate glass tablecloth oven spoon fridge pot pan ladle cup"*/
+let inTheKitchen = "refrigerator refrigerator knife fork plate glass tablecloth oven spoon fridge pot pan ladle cup";
 
 //Last index used in the word list for random word
 let wordsListIndex = 0;
