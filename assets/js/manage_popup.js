@@ -11,9 +11,12 @@ let popMessagesLarge = ["Animals", "Fruits & Vegetables", "School Tools", "Part 
 //3: Popup messege name of each button (array of strings)
 function getPopMessage(idPopMessageSize, title, messages) {
     let popMessageNode = document.createElement("div");
-    let popMessageTitleTextNode = document.createTextNode(title);
+    let popTitle = document.createElement("p");
+    let popTitleTextNode = document.createTextNode(title);
+    popTitle.appendChild(popTitleTextNode);
+    popMessageNode.appendChild(popTitle);
+
     
-    popMessageNode.appendChild(popMessageTitleTextNode);
 
     popMessageNode.classList.add("pop-box", "flex", "column", "justify-center","items-center", "animate");
 
