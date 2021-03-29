@@ -140,10 +140,17 @@
     border-style:groove;
 }
 
+/*Play section score container*/
 #score-container {
     position: relative;
-    width: 80px;
+    width: 70px;
     height: 70px;
     font-size: 20px;
     font-weight: 600;
 }
+
+/* @media (min-width: 630px) {
+    #play-section {
+        margin: 0 0 0 8px;
+    }
+} */

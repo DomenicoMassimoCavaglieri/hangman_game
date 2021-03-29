@@ -3,7 +3,7 @@
     background-color: #099dd8;
     opacity: 0.9;
     z-index: 3;
-    width: 320px;
+    width: 335px;
     border-radius: 10%;
     border: 2px solid #0a0191;
     font-weight: 900;
@@ -28,11 +28,11 @@
 }
 
 #pop-box-large {
-    margin-top: 40px;
-    height: 530px;
+    margin-top: 50px;
+    height: 540px;
     text-align: center;
-    font-size: 40px;
-    line-height: 40px;
+    font-size: 44px;
+    line-height: 44px;
 }
 
 .pop-btn {
@@ -42,9 +42,52 @@
     font-size: 25px;
     font-weight: 600;
     color: #0a0191;
-    width: auto;
+    min-width: 80px;
     height: 50px;
     border: 2px solid #0a0191;
     border-radius: 50px;
-    margin-top: 35px;
+    margin: 20px 3px 0;
 }
+
+#pop-btn1 {
+    margin-top: 40px;
+}
+/* 
+@media all and (min-height: 645px) and (max-height: 740px) {
+    #pop-box-large {
+        height: 600px;
+    }
+}
+
+@media (min-width: 630px) {
+    .pop-box {
+        display: block;
+        text-align: center;
+        padding: 5px 0
+    }
+
+    #pop-box-small {
+        margin-bottom: 20px;
+        height: 200px;
+        line-height: 90px;
+    }
+
+    #pop-box-large {
+        
+        width: 630px;
+        height: 270px;
+        font-size: 40px;
+        line-height: 60px;
+        border-radius: 6%;
+        margin-top: 40px;
+    }
+
+    .pop-btn {
+        margin: 10px 3px 0;
+    }
+
+    #pop-btn1 {
+        display: block;
+        margin: 0 auto;
+    }
+}    */

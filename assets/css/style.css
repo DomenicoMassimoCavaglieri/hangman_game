@@ -3,6 +3,12 @@
 @import "../css/play_section.css";
 @import "../css/popup._section.css";
 
+/* @media (min-width:768px) {
+    body {
+        justify-content: center;
+    }
+} */
+
 *{box-sizing: border-box;
     margin: 0;
     }
@@ -26,7 +32,6 @@ body {
     text-align: center;
     text-decoration: underline;
     font-size: 18px;
-    border-radius: 3%;
 }
 
 /*Word section*/
@@ -40,11 +45,11 @@ body {
 
 .letter {
     display: inline-block;
-    width: 30px;
-    height: 60px;
-    margin: 0 4px;
+    width: 22px;
+    height: 50px;
+    margin: 0 2px;
     text-align: center;
-    font-size: 50px;
+    font-size: 30px;
     color: transparent;
     border-bottom: 4px solid #0a0191;
     padding-top: 2px;
@@ -77,7 +82,31 @@ body {
 button:disabled { 
     background-color: #5db0e7; 
     opacity: 0.7;
-    color: #e7a75d; 
 } 
+/* 
+@media (min-width: 400px) {
+    .letter {
+        width: 25px;
+        height: 55px;
+        font-size: 35px;
+    }
+}
 
+@media (min-width: 630px) {
+    body {
+         flex-flow: row wrap;
+         display: flex;
+    }
 
+    #title-container {
+        position: absolute;
+        top: 10px;
+        left: 200px;
+    }
+
+    .letter {
+        width: 22px;
+        height: 50px;
+        font-size: 30px;
+    }
+} */

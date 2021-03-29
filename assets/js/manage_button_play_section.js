@@ -44,5 +44,5 @@ function getResetScoredButton() {
 //This function print and updates the match result
 function printScore(wonNumber, lostNumber) {
     document.getElementById("won-text").innerHTML = "Won: " + wonNumber;
-    document.getElementById("lose-text").innerHTML = "Lose: " + lostNumber;
+    document.getElementById("lose-text").innerHTML = "Lost: " + lostNumber;
 }
