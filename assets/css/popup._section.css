@@ -52,6 +52,13 @@
 #pop-btn1 {
     margin-top: 40px;
 }
+
+@media all and (min-height: 680px) {
+    #pop-box-large {
+        height: 600px;
+    }
+}
+
 /* 
 @media all and (min-height: 645px) and (max-height: 740px) {
     #pop-box-large {
