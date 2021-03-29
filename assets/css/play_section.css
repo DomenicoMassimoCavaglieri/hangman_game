@@ -167,12 +167,22 @@
 }
 
 @media (min-width: 740px) and (max-height: 360px) {
+    #play-section {
+        padding: 0;
+        width: 320px;
+        margin: 0 0 1rem;
+    }
+
     #gallow-container {
         width: 160px;
     }
 
     #hangman-container {
         top:42px;
-        right: 79px;
+        right: 100px;
+    }
+
+    #score-container {
+        width: 90px;
     }
 }
