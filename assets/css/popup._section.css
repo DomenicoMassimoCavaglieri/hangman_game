@@ -61,7 +61,8 @@
 
     #pop-box-small {
         width: 330px;
-        margin-top: 2rem;
+        height: 210px;
+        margin-top: 4rem;
     }
 }
 
@@ -79,6 +80,7 @@
 
     #pop-box-small {
         width: 330px;
-        margin-top: 2rem;
+        height: 210px;
+        margin-top: 5rem;
     }
 }
