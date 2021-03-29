@@ -15,7 +15,7 @@ function getPopMessage(idPopMessageSize, title, messages) {
     
     popMessageNode.appendChild(popMessageTitleTextNode);
 
-    popMessageNode.classList.add("pop-box", "flex", "column", "items-center", "animate");
+    popMessageNode.classList.add("pop-box", "flex", "column", "justify-center","items-center", "animate");
 
     for (let i = 0; i < messages.length; i++) {
         let popBtnNode = document.createElement("button");
@@ -25,15 +25,17 @@ function getPopMessage(idPopMessageSize, title, messages) {
         
         //This block assigns a progressive id to each button
         let popBtnId = "pop-btn"
-        popBtnNode.classList.add(("pop-btn"))
         popBtnId += i + 1;
         popBtnNode.setAttribute("id", popBtnId);
-
+        
+        popBtnNode.classList.add(("pop-btn"))
+        
         popMessageNode.appendChild(popBtnNode);
     }
 
     popMessageNode.setAttribute("id", idPopMessageSize);
-    document.body.appendChild(popMessageNode);
+    //document.body.appendChild(popMessageNode);
+    document.getElementById("main").appendChild(popMessageNode);
 
     setTimeout(
         function() {
@@ -52,14 +54,14 @@ function setPopButtonOnListening(idPopMessageSize) {
     if (popMessageNode.childNodes.length === onlyTitleAndOneButton) {
         popMessageNode.childNodes[1].addEventListener("click", function () {
             gamePreparation();
-            document.body.removeChild(popMessageNode)
+            document.getElementById("main").removeChild(popMessageNode)
         });
     } else {
         for (let i = 1; i < popMessageNode.childNodes.length; i++) {
             popMessageNode.childNodes[i].addEventListener("click", function () {
                 topic = i;
                 gamePreparation();
-                document.body.removeChild(popMessageNode)
+                document.getElementById("main").removeChild(popMessageNode)
             });
         }
     }
