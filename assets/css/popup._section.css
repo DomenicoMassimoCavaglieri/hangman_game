@@ -64,6 +64,16 @@
         height: 210px;
         margin-top: 4rem;
     }
+
+    .pop-btn {
+        font-size: 22px;
+        padding: 8px 10px;
+        margin: 20px 12px 0;
+    }
+
+    .pop-btn:hover {
+        transform: scale(1.1);
+    }
 }
 
 @media (min-width: 768px) and (min-height: 1024px) {
@@ -87,6 +97,16 @@
         width: 330px;
         height: 210px;
         margin-top: 5rem;
+    }
+
+    .pop-btn {
+        font-size: 28px;
+        padding: 0 20px;
+        margin: 20px 7px 0;
+    }
+
+    .pop-btn:hover {
+        transform: scale(1.1);
     }
 }
 
