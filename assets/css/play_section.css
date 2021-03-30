@@ -201,3 +201,50 @@
         right: 70px;
     }
 }
+
+@media (min-width: 1200px) {
+    #play-section {
+        width: 500px;
+        height: 300px;
+        padding: 0;
+    }
+
+    #gallow-container {
+        width: 200px;
+        height: 260px
+    }
+
+    #gallow-line-1 {
+        width: 250px;
+        top: 130px;
+        left: -70px;
+      }
+        
+       #gallow-line-2 {
+        width: 73.67px;
+        height: 0px;
+        top: 253px;
+        left: 20px;    
+      }
+        
+      #hangman-container {
+        top:42px;
+        right: 222px;
+    }
+
+    .ply-btn { 
+        font-size: 22px;
+        width: 96px;
+        height: 70px;
+    }
+
+    #score-container {
+        width: 120px;
+        height: 80px;
+        font-size: 26px;
+    }
+
+    #reset-score-btn, #change-topic-btn {
+        margin: 0 0 90px 0;
+    }
+}

@@ -10,9 +10,9 @@
 
 body {
     position: relative;
-    background-image: url("../images/paper_3.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url("../images/paper_4.png");
+    background-repeat: repeat;
+    background-size: contain;
     width: 100vw;
     height: 100vh;
     margin: auto;
@@ -152,6 +152,10 @@ button:disabled {
 }
 
 @media (min-width: 992px) {
+    body {
+        background-image: url("../images/paper_5.png");
+    }
+    
     #main {
         width: 800px;
         height: 300px;
@@ -171,6 +175,38 @@ button:disabled {
 
     .keyboard-key {
         font-size: 36px;
+        margin: 2px 2px;
+    }
+}
+
+@media (min-width: 1200px) {
+    #main {
+        width: 1070px;
+        height: 430px;
+    }
+
+    #title-container {
+        font-size: 28px;
+        margin-bottom: 6rem;
+    }
+
+    #word-section {
+        height: 50px;
+    }
+
+    .letter {
+        width: 40px;
+        height: 70px;
+        font-size: 60px;
+    }
+    #keyboard-section {
+        width: 330px;
+        height: 300px;
+        margin-top: 50px;
+    }
+
+    .keyboard-key {
+        font-size: 50px;
         margin: 2px 2px;
     }
 }
