@@ -1,13 +1,13 @@
 //This function enables all buttons
 function setKeyboardEnabled() {
-    for (key of getKeyboardKey()) {
+    for (let key of getKeyboardKey()) {
         key.removeAttribute("disabled", true);
     }
 }
 
 //This function disables all buttons
 function setKeyboardDisabled() {
-    for (key of getKeyboardKey()) {
+    for (let key of getKeyboardKey()) {
         key.setAttribute("disabled", true);
     }
 }

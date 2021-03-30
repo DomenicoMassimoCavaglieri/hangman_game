@@ -1,12 +1,12 @@
 //Variable containing the number referring to the topic chosen by the user
 let topic = 0;
 
-//Input words: string made up of a list of words without punctuation marks
-let animals = "cat dog canary turtle lion tiger elephant hippo gorilla monkey mouse hamster parrot falcon eagle";
-let fruitsAndVagetebles = "banana apple orange anas pear peach apricot plum melon kiwi pomegranate tomato cucumber lettuce eggplant courgette pumpkin grapes";
-let schoolTools = "ruler rubber pen pencil album notebook sheet compass backpack book marker highlighter glue";
-let partOfTheHouse = "garden living room kitchen bedroom bathroom garage box terrace cellar attic balcony corridor";
-let inTheKitchen = "refrigerator knife fork plate glass tablecloth oven spoon fridge pot pan ladle cup";
+//Input words: array of words
+let animals = ["mouse", "dog"];
+let fruitsAndVagetebles = ["apple", "ananas"];
+let schoolTools = ["glue", "pencil"];
+let partOfTheHouse = ["box", "garage"];
+let inTheKitchen = ["fork", "plate"];
 
 //Last index used in the word list for random word
 let wordsListIndex = 0;
@@ -22,19 +22,25 @@ let attemptLetter = "";
 
 function getTopic() {
     switch (topic) {
-        case 1: return animals;
-        case 2: return fruitsAndVagetebles;
-        case 3: return schoolTools;
-        case 4: return partOfTheHouse;
-        case 5: return inTheKitchen;
-        default: return fruitsAndVagetebles;
+        case 1:
+            return animals;
+        case 2:
+            return fruitsAndVagetebles;
+        case 3:
+            return schoolTools;
+        case 4:
+            return partOfTheHouse;
+        case 5:
+            return inTheKitchen;
+        default:
+            return fruitsAndVagetebles;
     }
-} 
+}
 
 
 //This function sets the word as visible
 function setWordVisible() {
-    for (letter of getLetter()) {
+    for (let letter of getLetter()) {
         letter.classList.add("visible");
     }
 }
@@ -52,7 +58,7 @@ function getLetter() {
 //Given an array of individual letters, print the letters with their own style
 function printHiddenWord(list) {
     getWordContainer().innerHTML = "";
-    for (letter of list) {
+    for (let letter of list) {
         var singleLetterNode = document.createElement("div");
         var singleLetterTextNode = document.createTextNode(letter);
         singleLetterNode.appendChild(singleLetterTextNode);
@@ -67,20 +73,27 @@ function getWordContainer() {
     return containerWord;
 }
 
-//Given a string made up of a list of words without punctuation marks,
-//it returns a random word
-function getHiddenWord(stringOfWords) {
-    let hiddenWord = stringOfWords.split(" ");
-    let i = randomIndex(hiddenWord);
-    return hiddenWord[i].toUpperCase();
+//Given an array of words, it returns a random word
+function getHiddenWord(list) {
+    let i = randomIndex(list);
+    return list[i].toUpperCase();
 }
 
 //Given an array, it always returns a different random index
 function randomIndex(list) {
-    let index = Math.floor(Math.random() * list.length);
-    while (index == wordsListIndex) {
-        index = Math.floor(Math.random() * list.length);
-    }
-    wordsListIndex = index;
+    let index = 0;
+    if (list.length > 0) {
+        while (index == wordsListIndex) {
+            index = Math.floor(Math.random() * list.length);
+        }
+        wordsListIndex = index;
+    } 
     return index;
+}
+
+//Given a string made up of a list of words without punctuation marks,
+//it returns an array of words
+function getListOfWordsFromString(stringOfWords) {
+    let list = stringOfWords.split(" ");
+    return list;
 }

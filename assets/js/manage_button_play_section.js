@@ -1,7 +1,7 @@
 //This function enables the Play section button
 function setPlayButtonEnebled() {
     let playButton = document.getElementsByClassName("ply-btn");
-    for (button of playButton) {
+    for (let button of playButton) {
         button.removeAttribute("disabled", true);
     }
 }
@@ -9,7 +9,7 @@ function setPlayButtonEnebled() {
 //This function disables the Play section button
 function setPlayButtonDisabled() {
     let playButton = document.getElementsByClassName("ply-btn");
-    for (button of playButton) {
+    for (let button of playButton) {
         button.setAttribute("disabled", true);
     }
 }
