@@ -1,15 +1,15 @@
 //Variable containing the number referring to the topic chosen by the user
 let topic = 0;
 
-//List of words divided by topics, from array of objects
-let animals = ["cat","tiger"];
-let fruitsAndVagetables = ["apple","kiwi"];
-let schoolTools = ["glue","ruler"];
-let partOfTheHouse = ["room","kitchen"];
-let inTheKitchen = ["plate", "fork"];
+//Input words: string made up of a list of words without punctuation marks
+let animals = "cat dog canary turtle lion tiger elephant hippo gorilla monkey mouse hamster parrot falcon eagle";
+let fruitsAndVagetables = "banana apple orange anas pear peach apricot plum melon kiwi pomegranate tomato cucumber lettuce eggplant courgette pumpkin grapes";
+let schoolTools = "ruler rubber pen pencil album notebook sheet compass backpack book marker highlighter glue";
+let partOfTheHouse = "garden living room kitchen bedroom bathroom garage box terrace cellar attic balcony corridor";
+let inTheKitchen = "refrigerator knife fork plate glass tablecloth oven spoon fridge pot pan ladle cup";
 
 //Last index used in the word list for random word
-let wordsListIndex;
+let wordsListIndex = 0;
 
 //Hidden word
 let hiddenWord;
@@ -22,20 +22,14 @@ let attemptLetter = "";
 
 function getTopic() {
     switch (topic) {
-        case 1:
-            return animals;
-        case 2:
-            return fruitsAndVagetables;
-        case 3:
-            return schoolTools;
-        case 4:
-            return partOfTheHouse;
-        case 5:
-            return inTheKitchen;
-        default:
-            return fruitsAndVagetebles;
+        case 1: return animals;
+        case 2: return fruitsAndVagetables;
+        case 3: return schoolTools;
+        case 4: return partOfTheHouse;
+        case 5: return inTheKitchen;
+        default: return fruitsAndVagetables;
     }
-}
+} 
 
 
 //This function sets the word as visible
@@ -73,30 +67,20 @@ function getWordContainer() {
     return containerWord;
 }
 
-//Given an array of words, it returns a random word
-function getHiddenWord(list) {
-    if (list.length != 0) {
-        let i = randomIndex(list);
-        return list[i].toUpperCase();
-    } else
-    return "HELLO"
+//Given a string made up of a list of words without punctuation marks,
+//it returns a random word
+function getHiddenWord(stringOfWords) {
+    let hiddenWord = stringOfWords.split(" ");
+    let i = randomIndex(hiddenWord);
+    return hiddenWord[i].toUpperCase();
 }
 
 //Given an array, it always returns a different random index
 function randomIndex(list) {
-    let index = 0;
-    if (list.length > 1) {
-        while (index == wordsListIndex) {
-            index = Math.floor(Math.random() * list.length);
-        }
-        wordsListIndex = index;
+    let index = Math.floor(Math.random() * list.length);
+    while (index == wordsListIndex) {
+        index = Math.floor(Math.random() * list.length);
     }
+    wordsListIndex = index;
     return index;
-}
-
-//Given a string made up of a list of words without punctuation marks,
-//it returns an array of words
-function getListOfWordsFromString(stringOfWords) {
-    let list = stringOfWords.split(" ");
-    return list;
 }

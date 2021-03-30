@@ -8,10 +8,14 @@ let won = 0;
 //Game lost
 let lost = 0;
 
+//Update the word lists divided by arguments, 
+getAllCategoryOfWords()
+
+
 //Initial Popup
 getPopMessage("pop-box-large", "Choose the topic", popMessagesLarge); 
 setPopButtonOnListening("pop-box-large");
- 
+
 //The keyboard appears
 getKeyboard();
 
@@ -32,7 +36,15 @@ function gamePreparation() {
     
     hiddenWord = getHiddenWord(getTopic());
     wordLetters = hiddenWord.split("");
-
+    
+    // console.log(animals);
+    // console.log(fruitsAndVagetables);
+    // console.log(schoolTools);
+    // console.log(partOfTheHouse);
+    // console.log(inTheKitchen);
+    // console.log("--------------")
+    
+    
     printHiddenWord(hiddenWord);
 
     setKeyboardEnabled();
