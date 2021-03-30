@@ -22,7 +22,7 @@ body {
 
 main {
     width: 100%;
-    height: 560px;
+    height: 490px;
 }
 
 #title-container {
@@ -88,7 +88,7 @@ button:disabled {
 
 @media (min-width: 568px) {
     #main {
-        height: 290px;
+        height: 260px;
         flex-flow: column wrap;
     }
 
@@ -100,7 +100,7 @@ button:disabled {
         width: 270px;
         height: 260px;
         margin-top: 0;
-        padding-top: 15px;
+        
     }
 
     .keyboard-key {
