@@ -1,63 +1,105 @@
 //List of hidden word
 let wordsJson = [
     {
-        word : "eagle",
+        word : "cat",
         topic : "animals"
-    },
-    {
-        word: "bedroom",
-        topic: "part_of_the_house"
-    },
-    {
-        word : "leopard",
-        topic : "animals"
-    },
-    {
-        word : "Knife",
-        topic : "in_the_kitchen"
-    },
-    {
-        word : "monkey",
-        topic : "animals"
-    },
-    {
-        word : "orange",
-        topic : "fruitsAndvegetables"
     },
     {
         word : "bear",
         topic : "animals"
     },
     {
+        word : "tiger",
+        topic : "animals"
+    },
+    {
+        word : "monkey",
+        topic : "animals"
+    },
+    {
+        word : "leopard",
+        topic : "animals"
+    },
+    {
+        word : "pea",
+        topic : "fruitsAndvegetables"
+    },
+    {
+        word : "kiwi",
+        topic : "fruitsAndvegetables"
+    },
+    {
+        word : "apple",
+        topic : "fruitsAndvegetables"
+    },
+    {
+        word : "orange",
+        topic : "fruitsAndvegetables"
+    },
+    {
+        word : "mushroom",
+        topic : "fruitsAndvegetables"
+    },
+    {
+        word: "pen",
+        topic: "school_tools"
+    },
+    {
+        word: "book",
+        topic: "school_tools"
+    },
+    {
         word: "ruler",
         topic: "school_tools"
     },
     {
-        word : "cat",
-        topic : "animals"
+        word: "pencil",
+        topic: "school_tools"
     },
+    {
+        word: "Highlighter",
+        topic: "school_tools"
+    },
+    {
+        word: "box",
+        topic: "part_of_the_house"
+    },
+    {
+        word: "room",
+        topic: "part_of_the_house"
+    },
+    {
+        word: "attic",
+        topic: "part_of_the_house"
+    },
+    {
+        word: "garage",
+        topic: "part_of_the_house"
+    },
+    {
+        word: "bedroom",
+        topic: "part_of_the_house"
+    },
+    {
+        word : "cup",
+        topic : "in_the_kitchen"
+    },
+    {
+        word : "fork",
+        topic : "in_the_kitchen"
+    },
+    {
+        word : "Knife",
+        topic : "in_the_kitchen"
+    },
+    {
+        word : "fridge",
+        topic : "in_the_kitchen"
+    },
+    {
+        word : "saucepan",
+        topic : "in_the_kitchen"
+    }
 ]
 
 
-// //This function updates the word lists divided by topics
-// function getAllCategoryOfWords() {
-//     getOneCategoryOfwords("animals", animals)
-//     getOneCategoryOfwords("fruitsAndvegetables", fruitsAndVagetables)
-//     getOneCategoryOfwords("school_tools", schoolTools)
-//     getOneCategoryOfwords("part_of_the_house", partOfTheHouse)
-//     getOneCategoryOfwords("in_the_kitchen", inTheKitchen)
-// }
-
-// //This function updates only one word lists, starting from 
-// //an array of word object. Each object consists of two properties: 
-// //the word and the category to which it belongs.
-// function getOneCategoryOfwords(category, listName) {
-//     for (let wordsItem of wordsJson) {
-//         for (let property in wordsItem) {
-//           if (wordsItem [property] === category && 
-//             listName.indexOf(wordsItem.word) === -1) {
-//             listName.push(wordsItem.word);  
-//           } 
-//         }
-//     }
-// }
