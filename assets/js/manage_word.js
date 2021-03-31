@@ -1,18 +1,16 @@
 //Variable containing the number referring to the topic chosen by the user
 let topic = 0;
 
-//List of words divided by topics, from array of objects
-// let animals = ["cat","tiger"];
-// let fruitsAndVagetables = ["apple","kiwi"];
-// let schoolTools = ["glue","ruler"];
-// let partOfTheHouse = ["room","kitchen"];
-// let inTheKitchen = ["plate", "fork"];
+
 
 //Last index used in the word list for random word
 let wordsListIndex;
 
 //Hidden word
 let hiddenWord;
+
+
+let topicTitle = "";
 
 //List of Letters of hidden word
 let wordLetters;
@@ -23,22 +21,22 @@ let attemptLetter = "";
 function getTopic() {
     switch (topic) {
         case 1:
-            printTopic("ANIMALS");
+            topicTitle = "ANIMALS";
             return getHiddenWord(wordsJson, "animals");
         case 2:
-            printTopic("FRUITS&VEGETABLES");
+            topicTitle = "FRUITS&VEGETABLES";
             return getHiddenWord(wordsJson, "fruitsAndvegetables"); 
         case 3:
-            printTopic("SCHOOL TOOLS");
+            topicTitle = "SCHOOL TOOLS";
             return getHiddenWord(wordsJson, "school_tools"); 
         case 4:
-            printTopic("PART OF THE HOUSE");
+            topicTitle = "PART OF THE HOUSE";
             return getHiddenWord(wordsJson, "part_of_the_house"); 
         case 5:
-            printTopic("IN THE KITCHEN");
+            topicTitle = "IN THE KITCHEN";
             return getHiddenWord(wordsJson, "in_the_kitchen"); 
         default:
-            printTopic("FRUITS&VEGETABLES");
+            topicTitle = "FRUITS&VEGETABLES";
             return getHiddenWord(wordsJson, "fruitsAndvegetables"); 
     }
 }

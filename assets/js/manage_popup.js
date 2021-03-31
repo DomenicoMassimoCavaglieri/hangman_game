@@ -64,6 +64,7 @@ function setPopButtonOnListening(idPopMessageSize) {
             popMessageNode.childNodes[i].addEventListener("click", function () {
                 topic = i;
                 gamePreparation();
+                printTopic(topicTitle);
                 document.getElementById("main").removeChild(popMessageNode)
             });
         }
