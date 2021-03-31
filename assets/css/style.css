@@ -28,11 +28,24 @@ main {
 #title-container {
     position: relative;
     width: auto;
-    height:55px;
+    height:75px;
     text-align: center;
-    text-decoration: underline;
-    font-size: 18px;
     margin-bottom: 1rem;
+}
+
+#title {
+    text-decoration: underline;
+    font-size: 36px;
+}
+
+#topic-title {
+    position: relative;
+    font-size: 24px;
+    color: #ff0000;
+    line-height: 22px;
+    text-decoration:unset;
+    padding: 5px 0 0;
+    height: 25px;
 }
 
 /*Word section*/
@@ -121,8 +134,11 @@ button:disabled {
     }
 
     #title-container {
-        font-size: 18px;
         margin-bottom: 1rem;
+    }
+
+    #title {
+        font-size: 40px;
     }
 
     #word-section {
@@ -186,8 +202,17 @@ button:disabled {
     }
 
     #title-container {
-        font-size: 28px;
         margin-bottom: 6rem;
+        height: auto;
+    }
+
+    #title{
+        font-size: 60px;
+    }
+
+    #topic-title {
+        margin-top: 30px;
+        font-size: 50px;
     }
 
     #word-section {
