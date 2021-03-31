@@ -9,7 +9,7 @@ let won = 0;
 let lost = 0;
 
 //Update the word lists divided by arguments, 
-getAllCategoryOfWords()
+//getAllCategoryOfWords()
 
 
 //Initial Popup
@@ -34,7 +34,7 @@ setPlayButtonDisabled();
 //enable the keys in the play section
 function gamePreparation() {
     
-    hiddenWord = getHiddenWord(getTopic());
+    hiddenWord = getTopic().toUpperCase();
     wordLetters = hiddenWord.split("");
     
     // console.log(animals);
