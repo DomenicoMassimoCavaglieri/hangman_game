@@ -16,8 +16,6 @@ function getPopMessage(idPopMessageSize, title, messages) {
     popTitle.appendChild(popTitleTextNode);
     popMessageNode.appendChild(popTitle);
 
-    
-
     popMessageNode.classList.add("pop-box", "flex", "column", "justify-center","items-center", "animate");
 
     for (let i = 0; i < messages.length; i++) {

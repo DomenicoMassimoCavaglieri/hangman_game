@@ -101,5 +101,3 @@ let wordsJson = [
         topic : "in_the_kitchen"
     }
 ]
-
-

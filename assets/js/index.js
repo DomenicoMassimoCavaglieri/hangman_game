@@ -1,16 +1,12 @@
 
-//Attempts failed
+//Attempts failed counter
 let strike = 4;
 
-//Game won
+//Game won counter
 let won = 0;
 
-//Game lost
+//Game lost counter
 let lost = 0;
-
-//Update the word lists divided by arguments, 
-//getAllCategoryOfWords()
-
 
 //Initial Popup
 getPopMessage("pop-box-large", "Choose the topic", popMessagesLarge); 
@@ -37,14 +33,6 @@ function gamePreparation() {
     hiddenWord = getTopic().toUpperCase();
     wordLetters = hiddenWord.split("");
     
-    // console.log(animals);
-    // console.log(fruitsAndVagetables);
-    // console.log(schoolTools);
-    // console.log(partOfTheHouse);
-    // console.log(inTheKitchen);
-    // console.log("--------------")
-    
-    
     printHiddenWord(hiddenWord);
 
     setKeyboardEnabled();
@@ -57,9 +45,10 @@ function gamePreparation() {
     printScore(won, lost);
 }
 
-//This function manages the game: 
+//This function is associated with each key on the keyboard 
+//and manages the game: 
 //it checks if the chosen letter is present, 
-//the score conditions and the status of the keys and hangman
+//the score conditions and the status of the keys and "hanged man"
 function play(listOfLetters) {
     let LettersGuessForAttempt = 0;
     for (let i = 0; i < getLetter().length; i++) {

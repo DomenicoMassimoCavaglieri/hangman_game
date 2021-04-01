@@ -1,7 +1,5 @@
-//Variable containing the number referring to the topic chosen by the user
+//Variable containing the number referring to the topic, chosen by the user
 let topic = 0;
-
-
 
 //Last index used in the word list for random word
 let wordsListIndex;
@@ -9,7 +7,7 @@ let wordsListIndex;
 //Hidden word
 let hiddenWord;
 
-
+//The title of the topic
 let topicTitle = "";
 
 //List of Letters of hidden word
@@ -18,6 +16,9 @@ let wordLetters;
 //Attempt letter from keyboeard
 let attemptLetter = "";
 
+//This function allows you to generate random words 
+//only with the topic chosen by the user 
+//and to send the title of the topic to print on the screen
 function getTopic() {
     switch (topic) {
         case 1:
@@ -41,7 +42,10 @@ function getTopic() {
     }
 }
 
-
+//This function randomly chooses a word based on the desired topic
+//It also avoids a crash if the inputs are incorrect
+//Input 1: List of words (array of objects with word and topic)
+//Input 2: Topic (string)
 function getHiddenWord(listOfWords, userTopic) {
 
     let i = randomIndex(listOfWords);
@@ -67,14 +71,15 @@ function getHiddenWord(listOfWords, userTopic) {
                     wordsListIndex = i;
                     return listOfWords[i].word;
             }
-
         } else
             return "hello";
-
     } else
         return "hello";
 }
 
+//This funcion, given an array, generates 
+//an index that is always different, based on its length
+//It also avoids a crash if the inputs are incorrect
 function randomIndex(list) {
     let index;
     if (list) {
@@ -90,6 +95,7 @@ function randomIndex(list) {
     return index;
 }
 
+//This function allows you to print the title of the topic on the screen
 function printTopic(topic) {
     let topicTitleNode = document.createElement("p");
     let topicTitleTextNode = document.createTextNode(topic);
@@ -98,10 +104,12 @@ function printTopic(topic) {
     getTitleContainer().appendChild(topicTitleNode);
 }
 
+//This function intercepts the topic title
 function getTopicTitle() {
     return document.getElementById("topic-title");
 }
 
+//This function intercepts the topic title container
 function getTitleContainer() {
     return document.getElementById("title-container");
 }
@@ -137,35 +145,5 @@ function printHiddenWord(list) {
 
 //This function intercepts the word container
 function getWordContainer() {
-    let containerWord = document.getElementById("word-section");
-    return containerWord;
-}
-
-//Given an array of words, it returns a random word
-// function getHiddenWord(list) {
-//     if (list.length != 0) {
-//         let i = randomIndex(list);
-//         return list[i].toUpperCase();
-//     } else
-//     return "HELLO"
-// }
-
-
-//Given an array, it always returns a different random index
-// function randomIndex(list) {
-//     let index = 0;
-//     if (list.length > 1) {
-//         while (index == wordsListIndex) {
-//             index = Math.floor(Math.random() * list.length);
-//         }
-//         wordsListIndex = index;
-//     }
-//     return index;
-// }
-
-//Given a string made up of a list of words without punctuation marks,
-//it returns an array of words
-function getListOfWordsFromString(stringOfWords) {
-    let list = stringOfWords.split(" ");
-    return list;
+    return document.getElementById("word-section");
 }
