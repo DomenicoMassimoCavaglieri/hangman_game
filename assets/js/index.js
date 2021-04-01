@@ -24,10 +24,12 @@ getResetScoredButton()
 setKeyboardDisabled();
 setPlayButtonDisabled();
 
-//This function prepares the start of the game:
-//Prepare the secret word on the screen, 
-//remove all parts of the hanged man, 
-//enable the keys in the play section
+
+/**
+ * Prepare the secret word on the screen, 
+ * remove all parts of the hanged man, 
+ * enable the keys in the play section
+ */
 function gamePreparation() {
     
     hiddenWord = getTopic().toUpperCase();
@@ -45,11 +47,12 @@ function gamePreparation() {
     printScore(won, lost);
 }
 
-//This function is associated with each key on the keyboard 
-//and manages the game: 
-//it checks if the chosen letter is present, 
-//the score conditions and the status of the keys and "hanged man"
-function play(listOfLetters) {
+/**
+ * Associated with each key on the keyboard 
+ * checks if the chosen letter is present
+ * the score conditions and the status of the keys and "hanged man"
+ */
+function play() {
     let LettersGuessForAttempt = 0;
     for (let i = 0; i < getLetter().length; i++) {
         if (getLetter()[i].innerHTML === attemptLetter) {

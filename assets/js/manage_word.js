@@ -42,15 +42,18 @@ function getTopic() {
     }
 }
 
-//This function randomly chooses a word based on the desired topic
-//It also avoids a crash if the inputs are incorrect
-//Input 1: List of words (array of objects with word and topic)
-//Input 2: Topic (string)
+
+/**
+ * Chooses a word based on the desired topic
+ * @param {array of objects} listOfWords 
+ * @param {string} userTopic 
+ * @returns {string} 
+ */
 function getHiddenWord(listOfWords, userTopic) {
 
     let i = randomIndex(listOfWords);
     let counter = [];
-
+    //It avoids a crash if the inputs are incorrect
     if (listOfWords != undefined) {
         if (listOfWords.length > 1) {
 
@@ -77,11 +80,15 @@ function getHiddenWord(listOfWords, userTopic) {
         return "hello";
 }
 
-//This funcion, given an array, generates 
-//an index that is always different, based on its length
-//It also avoids a crash if the inputs are incorrect
+
+/**
+ * Generates an index that is always different, based on array length
+ * @param {array} list 
+ * @returns {number}
+ */
 function randomIndex(list) {
     let index;
+    //It avoids a crash if the inputs are incorrect
     if (list) {
         if (list.length > 1) {
             index = Math.floor(Math.random() * list.length);
@@ -95,7 +102,7 @@ function randomIndex(list) {
     return index;
 }
 
-//This function allows you to print the title of the topic on the screen
+//Print the title of the topic on the screen
 function printTopic(topic) {
     let topicTitleNode = document.createElement("p");
     let topicTitleTextNode = document.createTextNode(topic);
@@ -104,34 +111,38 @@ function printTopic(topic) {
     getTitleContainer().appendChild(topicTitleNode);
 }
 
-//This function intercepts the topic title
+//Intercept the topic title
 function getTopicTitle() {
     return document.getElementById("topic-title");
 }
 
-//This function intercepts the topic title container
+//Intercept the topic title container
 function getTitleContainer() {
     return document.getElementById("title-container");
 }
 
-//This function sets the word as visible
+//Iets the ord as visible
 function setWordVisible() {
     for (let letter of getLetter()) {
         letter.classList.add("visible");
     }
 }
 
-//This function intercepts all letter guess of the hidden word
+//Intercept all letter guess of the hidden word
 function getLetterGuess() {
     return document.getElementsByClassName("visible");
 }
 
-//This function intercepts all letter of the hidden word
+//Intercept all letter of the hidden word
 function getLetter() {
     return document.getElementsByClassName("letter");
 }
 
-//Given an array of individual letters, print the letters with their own style
+
+/**
+ * Given an array of individual letters, print the letters with their own style
+ * @param {array} list 
+ */
 function printHiddenWord(list) {
     getWordContainer().innerHTML = "";
     for (let letter of list) {
@@ -143,7 +154,7 @@ function printHiddenWord(list) {
     }
 }
 
-//This function intercepts the word container
+//Intercept the word container
 function getWordContainer() {
     return document.getElementById("word-section");
 }

@@ -4,11 +4,13 @@ let popMessageSmall = ["OK"];
 //Button text in the large Popup
 let popMessagesLarge = ["Animals", "Fruits & Vegetables", "School Tools", "Part of the House", "In the kitchen"];
 
-//This function generates pop-up messages with title and n button
-//Input:
-//1: Popup message size (CSS id)
-//2: Popup message title (string)
-//3: Popup messege name of each button (array of strings)
+
+/**
+ * Generates pop-up messages with title and n button
+ * @param {string} idPopMessageSize  (CSS id)
+ * @param {string} title  (title of the popup)
+ * @param {array of strings} messages (names of the buttons of popup)
+ */
 function getPopMessage(idPopMessageSize, title, messages) {
     let popMessageNode = document.createElement("div");
     let popTitle = document.createElement("p");
@@ -35,7 +37,6 @@ function getPopMessage(idPopMessageSize, title, messages) {
     }
 
     popMessageNode.setAttribute("id", idPopMessageSize);
-    //document.body.appendChild(popMessageNode);
     document.getElementById("main").appendChild(popMessageNode);
 
     setTimeout(
@@ -45,9 +46,11 @@ function getPopMessage(idPopMessageSize, title, messages) {
     );
 }
 
-//This function listens to the button of the popup message
-//and assigns each a specific function
-//Input: Popup message size (CSS id)
+
+/**
+ * Listens to the button of the popup message and assigns each a specific function
+ * @param {string} idPopMessageSize (CSS id)
+ */
 function setPopButtonOnListening(idPopMessageSize) {
     let popMessageNode = document.getElementById(idPopMessageSize);    
     let onlyTitleAndOneButton = 2;
