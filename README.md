@@ -3,8 +3,7 @@
 <h3>New version of the traditional Hangman Game, in the school style...</h3>
 <p>The user can choose words between different topics</p>
 <br>
-<h4>Languages<h4>
+<h4>Languages</h4>
 <p>Javascript, Html5, CSS3</p>
- <br>
 <h4>Deploy:</h4>
 https://newhangmangame.netlify.app/
