@@ -5,5 +5,6 @@
 <br>
 <h4>Languages<h4>
 <p>Javascript, Html5, CSS3</p>
+ <br>
 <h4>Deploy:</h4>
 https://newhangmangame.netlify.app/
