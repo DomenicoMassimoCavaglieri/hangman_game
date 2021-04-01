@@ -4,6 +4,6 @@
 <p>The user can choose words between different topics</p>
 <br>
 <h4>Languages<h4>
-<p>Javascript, Html5, CSS3 
+<p>Javascript, Html5, CSS3</p>
 <h4>Deploy:</h4>
 https://newhangmangame.netlify.app/
