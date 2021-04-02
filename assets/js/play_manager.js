@@ -13,7 +13,7 @@ let lost = 0;
  * checks if the chosen letter is present
  * the score conditions and the status of the keys and "hanged man"
  */
- function play() {
+function play() {
     let LettersGuessForAttempt = 0;
     for (let i = 0; i < getLetter().length; i++) {
         if (getLetter()[i].innerHTML === attemptLetter) {
@@ -35,18 +35,10 @@ let lost = 0;
     if (LettersGuessForAttempt == 0) {
         (strike--)
         switch (strike) {
-            case 0: 
-                getHangParts("hang-leg-l");
-                getHangParts("hang-leg-r");
-                setKeyboardDisabled();
-                setPlayButtonDisabled();
-                setWordVisible();
-                getPopMessage("pop-box-small", "You lost...", popMessageSmall);
-                setPopButtonOnListening("pop-box-small");
-                lost++;
-                printScore(won, lost);
+            case 0:
+                setDefeat() 
                 break;
-            case 1: 
+            case 1:
                 getHangParts("hang-arm-l");
                 getHangParts("hang-arm-r");
                 break;
@@ -58,6 +50,18 @@ let lost = 0;
                 getHangParts("hang-head");
                 break;
         }
-        
+
     }
+}
+
+function setDefeat() {
+    getHangParts("hang-leg-l");
+    getHangParts("hang-leg-r");
+    setKeyboardDisabled();
+    setPlayButtonDisabled();
+    setWordVisible();
+    getPopMessage("pop-box-small", "You lost...", popMessageSmall);
+    setPopButtonOnListening("pop-box-small");
+    lost++;
+    printScore(won, lost);
 }
