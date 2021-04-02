@@ -21,7 +21,7 @@ setPlayButtonDisabled();
  * remove all parts of the hanged man, 
  * enable the keys in the play section
  */
-function gamePreparation() {
+function setupGame() {
     
     hiddenWord = getTopic().toUpperCase();
     wordLetters = hiddenWord.split("");
