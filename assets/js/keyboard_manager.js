@@ -32,7 +32,7 @@ function getKeyboard() {
         keyboardKey.appendChild(keyboardKeyTextNode);
         keyboardKey.classList.add("keyboard-key", "bg-white","c-blue");
         keyboardKey.setAttribute("id", String.fromCharCode(i))
-        keyboardKey.addEventListener("click", function () {
+        keyboardKey.addEventListener("click", () => {
             getaAttemptLetter(String.fromCharCode(i));
             play(wordLetters);
         });

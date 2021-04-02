@@ -56,13 +56,13 @@ function setPopButtonOnListening(idPopMessageSize) {
     let onlyTitleAndOneButton = 2;
     
     if (popMessageNode.childNodes.length === onlyTitleAndOneButton) {
-        popMessageNode.childNodes[1].addEventListener("click", function () {
+        popMessageNode.childNodes[1].addEventListener("click", () => {
             gamePreparation();
             document.getElementById("main").removeChild(popMessageNode)
         });
     } else {
         for (let i = 1; i < popMessageNode.childNodes.length; i++) {
-            popMessageNode.childNodes[i].addEventListener("click", function () {
+            popMessageNode.childNodes[i].addEventListener("click", () => {
                 topic = i;
                 gamePreparation();
                 printTopic(topicTitle);

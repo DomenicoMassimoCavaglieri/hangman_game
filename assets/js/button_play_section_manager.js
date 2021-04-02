@@ -21,7 +21,7 @@ function getChangeWordButton() {
 
 //This function sets the change topic button
 function getChangeTopicButton() {
-    document.getElementById("change-topic-btn").addEventListener("click", function () {
+    document.getElementById("change-topic-btn").addEventListener("click", () => {
         getPopMessage("pop-box-large", "Choose the topic", popMessagesLarge); 
         setPopButtonOnListening("pop-box-large");
         //Disabled all buttons and topic title
@@ -35,7 +35,7 @@ function getChangeTopicButton() {
 
 //This function sets resets score button
 function getResetScoredButton() {
-    return document.getElementById("reset-score-btn").addEventListener("click", function () {
+    return document.getElementById("reset-score-btn").addEventListener("click", () => {
         won = 0;
         lost = 0;
         printScore(won, lost);
