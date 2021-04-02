@@ -26,19 +26,19 @@ function getTopic() {
             return getHiddenWord(wordsJson, "animals");
         case 2:
             topicTitle = "FRUITS&VEGETABLES";
-            return getHiddenWord(wordsJson, "fruitsAndvegetables"); 
+            return getHiddenWord(wordsJson, "fruitsAndvegetables");
         case 3:
             topicTitle = "SCHOOL TOOLS";
-            return getHiddenWord(wordsJson, "school_tools"); 
+            return getHiddenWord(wordsJson, "school_tools");
         case 4:
             topicTitle = "PART OF THE HOUSE";
-            return getHiddenWord(wordsJson, "part_of_the_house"); 
+            return getHiddenWord(wordsJson, "part_of_the_house");
         case 5:
             topicTitle = "IN THE KITCHEN";
-            return getHiddenWord(wordsJson, "in_the_kitchen"); 
+            return getHiddenWord(wordsJson, "in_the_kitchen");
         default:
             topicTitle = "FRUITS&VEGETABLES";
-            return getHiddenWord(wordsJson, "fruitsAndvegetables"); 
+            return getHiddenWord(wordsJson, "fruitsAndvegetables");
     }
 }
 
@@ -95,10 +95,9 @@ function randomIndex(list) {
             while (index === wordsListIndex) {
                 index = Math.floor(Math.random() * list.length);
             }
-        } else index = null;
+        }
         return index;
     }
-    else index = null;
     return index;
 }
 

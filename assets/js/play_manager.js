@@ -49,6 +49,9 @@ function play() {
             case 3:
                 getHangParts("hang-head");
                 break;
+            default:
+                getPopMessage("pop-box-large", "Choose the topic", popMessagesLarge); 
+                setPopButtonOnListening("pop-box-large");
         }
 
     }
