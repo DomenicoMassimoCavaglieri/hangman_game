@@ -33,7 +33,7 @@ function getKeyboard() {
         keyboardKey.classList.add("keyboard-key", "bg-white","c-blue");
         keyboardKey.setAttribute("id", String.fromCharCode(i))
         keyboardKey.addEventListener("click", () => {
-            getaAttemptLetter(String.fromCharCode(i));
+            getAttemptLetter(String.fromCharCode(i));
             play(wordLetters);
         });
         getkeyboardContainer().appendChild(keyboardKey);
@@ -41,6 +41,6 @@ function getKeyboard() {
 }
 
 //The chosen letter modifies its global variable
-function getaAttemptLetter(letter) {
+function getAttemptLetter(letter) {
     attemptLetter = document.getElementById(letter).innerHTML;
 }
