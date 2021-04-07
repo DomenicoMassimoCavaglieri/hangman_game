@@ -7,15 +7,10 @@ let wordsListIndex;
 //The title of the topic
 let topicTitle = "";
 
-//This function returns the secret word
-function hiddenWord() {
-    return getTopic().toUpperCase();
-}
-
 //This function allows you to generate random words 
 //only with the topic chosen by the user 
 //and to send the title of the topic to print on the screen
-function getTopic() {
+function getHiddenWordInTopic() {
     switch (topic) {
         case 1:
             topicTitle = "ANIMALS";
@@ -38,7 +33,6 @@ function getTopic() {
     }
 }
 
-
 /**
  * Chooses a word based on the desired topic
  * @param {array of objects} listOfWords 
@@ -60,20 +54,20 @@ function getHiddenWord(listOfWords, userTopic) {
             }
             switch (counter.length) {
                 case 0:
-                    return "hello";
+                    return "HELLO";
                 case 1:
-                    return counter[0].word;
+                    return counter[0].word.toUpperCase();
                 default:
                     while (listOfWords[i].topic != userTopic) {
                         i = randomIndex(listOfWords);
                     }
                     wordsListIndex = i;
-                    return listOfWords[i].word;
+                    return listOfWords[i].word.toUpperCase();
             }
         } else
-            return "hello";
+            return "HELLO";
     } else
-        return "hello";
+        return "HELLO";
 }
 
 

@@ -50,14 +50,14 @@ function setPopButtonOnListening(idPopMessageSize) {
     
     if (popMessageNode.childNodes.length === onlyTitleAndOneButton) {
         popMessageNode.childNodes[1].addEventListener("click", () => {
-            setupGame(hiddenWord());
+            setupGame(getHiddenWordInTopic());
             document.getElementById("main").removeChild(popMessageNode)
         });
     } else {
         for (let i = 1; i < popMessageNode.childNodes.length; i++) {
             popMessageNode.childNodes[i].addEventListener("click", () => {
                 topic = i;
-                setupGame(hiddenWord());
+                setupGame(getHiddenWordInTopic());
                 printTopic(topicTitle);
                 document.getElementById("main").removeChild(popMessageNode)
             });
