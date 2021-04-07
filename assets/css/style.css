@@ -195,6 +195,10 @@ button:disabled {
 }
 
 @media (min-width: 1200px) {
+    body {
+        min-height: 700px;
+    }
+    
     #main {
         width: 1070px;
         height: 430px;
