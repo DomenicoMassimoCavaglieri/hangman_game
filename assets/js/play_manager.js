@@ -13,7 +13,7 @@ function play() {
                 setKeyboardDisabled();
                 setPlayButtonDisabled();
                 hideHangPart();
-                getPopMessage("pop-box-small", "You Win!", popMessageSmall);
+                getPopMessage("pop-box-small", "You Win!", getPopMessageSmall());
                 setPopButtonOnListening("pop-box-small");
                 won++;
                 printScore(won, lost);
@@ -53,7 +53,7 @@ function setDefeat() {
     setKeyboardDisabled();
     setPlayButtonDisabled();
     setWordVisible();
-    getPopMessage("pop-box-small", "You lost...", popMessageSmall);
+    getPopMessage("pop-box-small", "You lost...", getPopMessageSmall());
     setPopButtonOnListening("pop-box-small");
     lost++;
     printScore(won, lost);

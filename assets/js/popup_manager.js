@@ -4,6 +4,13 @@ function getPopMessageLarge() {
     return popMessagesLarge;
 }
 
+//Button text in the small Popup
+function getPopMessageSmall() {
+    let popMessageSmall = ["OK"];
+    return popMessageSmall;
+}
+
+
 /**
  * Generates pop-up messages with title and n button
  * @param {string} idPopMessageSize  (CSS id)

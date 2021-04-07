@@ -10,9 +10,6 @@ let strike = 4;
 //Attempt letter from keyboeard
 let attemptLetter = "";
 
-//Button text in the small Popup
-let popMessageSmall = ["OK"];
-
 //The title of the topic
 let topicTitle = "";
 
