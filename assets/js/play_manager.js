@@ -40,7 +40,7 @@ function play() {
                 getHangParts("hang-head");
                 break;
             default:
-                getPopMessage("pop-box-large", "Choose the topic", popMessagesLarge); 
+                getPopMessage("pop-box-large", "Choose the topic", getPopMessageLarge()); 
                 setPopButtonOnListening("pop-box-large");
         }
 

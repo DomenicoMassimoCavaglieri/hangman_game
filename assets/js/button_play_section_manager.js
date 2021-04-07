@@ -23,7 +23,7 @@ function getChangeWordButton() {
 //This function sets the change topic button
 function getChangeTopicButton() {
     document.getElementById("change-topic-btn").addEventListener("click", () => {
-        getPopMessage("pop-box-large", "Choose the topic", popMessagesLarge); 
+        getPopMessage("pop-box-large", "Choose the topic", getPopMessageLarge()); 
         setPopButtonOnListening("pop-box-large");
         //Disabled all buttons and topic title
         setTimeout(() => {

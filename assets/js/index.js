@@ -13,9 +13,6 @@ let attemptLetter = "";
 //Button text in the small Popup
 let popMessageSmall = ["OK"];
 
-//Button text in the large Popup
-let popMessagesLarge = ["Animals", "Fruits & Vegetables", "School Tools", "Part of the House", "In the kitchen"];
-
 //The title of the topic
 let topicTitle = "";
 
@@ -29,7 +26,7 @@ let wordsListIndex;
 
 
 //Initial Popup
-getPopMessage("pop-box-large", "Choose the topic", popMessagesLarge);
+getPopMessage("pop-box-large", "Choose the topic", getPopMessageLarge());
 setPopButtonOnListening("pop-box-large");
 
 //The keyboard appears

@@ -1,3 +1,9 @@
+//Button text in the large Popup
+function getPopMessageLarge() {
+    let popMessagesLarge = ["Animals", "Fruits & Vegetables", "School Tools", "Part of the House", "In the kitchen"];        
+    return popMessagesLarge;
+}
+
 /**
  * Generates pop-up messages with title and n button
  * @param {string} idPopMessageSize  (CSS id)
