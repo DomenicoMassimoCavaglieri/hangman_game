@@ -1,12 +1,3 @@
-//Variable containing the number referring to the topic, chosen by the user
-let topic = 0;
-
-//Last index used in the word list for random word
-let wordsListIndex;
-
-//The title of the topic
-let topicTitle = "";
-
 //This function allows you to generate random words 
 //only with the topic chosen by the user 
 //and to send the title of the topic to print on the screen

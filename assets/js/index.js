@@ -16,6 +16,17 @@ let popMessageSmall = ["OK"];
 //Button text in the large Popup
 let popMessagesLarge = ["Animals", "Fruits & Vegetables", "School Tools", "Part of the House", "In the kitchen"];
 
+//The title of the topic
+let topicTitle = "";
+
+//Variable containing the number referring to the topic, chosen by the user
+let topic = 0;
+
+//Last index used in the word list for random word
+let wordsListIndex;
+
+
+
 
 //Initial Popup
 getPopMessage("pop-box-large", "Choose the topic", popMessagesLarge);
