@@ -16,7 +16,8 @@ function setPlayButtonDisabled() {
 
 //This function sets the change word button
 function getChangeWordButton() {
-    document.getElementById("change-word-btn").addEventListener("click", setupGame);
+    document.getElementById("change-word-btn").addEventListener("click", () => {
+        setupGame(hiddenWord())});
 }
 
 //This function sets the change topic button

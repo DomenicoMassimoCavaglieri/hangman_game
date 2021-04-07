@@ -1,13 +1,3 @@
-//Attempts failed counter
-let strike = 4;
-
-//Game won counter
-let won = 0;
-
-//Game lost counter
-let lost = 0;
-
-
 /**
  * Associated with each key on the keyboard 
  * checks if the chosen letter is present

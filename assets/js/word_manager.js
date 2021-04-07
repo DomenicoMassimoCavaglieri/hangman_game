@@ -4,17 +4,13 @@ let topic = 0;
 //Last index used in the word list for random word
 let wordsListIndex;
 
-//Hidden word
-let hiddenWord;
-
 //The title of the topic
 let topicTitle = "";
 
-//List of Letters of hidden word
-let wordLetters;
-
-//Attempt letter from keyboeard
-let attemptLetter = "";
+//This function returns the secret word
+function hiddenWord() {
+    return getTopic().toUpperCase();
+}
 
 //This function allows you to generate random words 
 //only with the topic chosen by the user 

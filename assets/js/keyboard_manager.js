@@ -34,7 +34,7 @@ function getKeyboard() {
         keyboardKey.setAttribute("id", String.fromCharCode(i))
         keyboardKey.addEventListener("click", () => {
             getAttemptLetter(String.fromCharCode(i));
-            play(wordLetters);
+            play();
         });
         getkeyboardContainer().appendChild(keyboardKey);
     }

@@ -1,6 +1,24 @@
+//Game won counter
+let won = 0;
+
+//Game lost counter
+let lost = 0;
+
+//Attempts failed counter
+let strike = 4;
+
+//Attempt letter from keyboeard
+let attemptLetter = "";
+
+//Button text in the small Popup
+let popMessageSmall = ["OK"];
+
+//Button text in the large Popup
+let popMessagesLarge = ["Animals", "Fruits & Vegetables", "School Tools", "Part of the House", "In the kitchen"];
+
 
 //Initial Popup
-getPopMessage("pop-box-large", "Choose the topic", popMessagesLarge); 
+getPopMessage("pop-box-large", "Choose the topic", popMessagesLarge);
 setPopButtonOnListening("pop-box-large");
 
 //The keyboard appears
@@ -16,17 +34,9 @@ setKeyboardDisabled();
 setPlayButtonDisabled();
 
 
-/**
- * Prepare the secret word on the screen, 
- * remove all parts of the hanged man, 
- * enable the keys in the play section
- */
-function setupGame() {
-    
-    hiddenWord = getTopic().toUpperCase();
-    wordLetters = hiddenWord.split("");
-    
-    printHiddenWord(hiddenWord);
+function setupGame(word) {
+
+    printHiddenWord(word);
 
     setKeyboardEnabled();
     setPlayButtonEnebled();

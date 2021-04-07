@@ -1,10 +1,3 @@
-//Button text in the small Popup
-let popMessageSmall = ["OK"];
-
-//Button text in the large Popup
-let popMessagesLarge = ["Animals", "Fruits & Vegetables", "School Tools", "Part of the House", "In the kitchen"];
-
-
 /**
  * Generates pop-up messages with title and n button
  * @param {string} idPopMessageSize  (CSS id)
@@ -57,14 +50,14 @@ function setPopButtonOnListening(idPopMessageSize) {
     
     if (popMessageNode.childNodes.length === onlyTitleAndOneButton) {
         popMessageNode.childNodes[1].addEventListener("click", () => {
-            setupGame();
+            setupGame(hiddenWord());
             document.getElementById("main").removeChild(popMessageNode)
         });
     } else {
         for (let i = 1; i < popMessageNode.childNodes.length; i++) {
             popMessageNode.childNodes[i].addEventListener("click", () => {
                 topic = i;
-                setupGame();
+                setupGame(hiddenWord());
                 printTopic(topicTitle);
                 document.getElementById("main").removeChild(popMessageNode)
             });
