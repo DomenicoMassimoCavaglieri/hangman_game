@@ -104,7 +104,7 @@ function getTitleContainer() {
 
 //Iets the ord as visible
 function setWordVisible() {
-    for (let letter of getLetter()) {
+    for (let letter of getLetters()) {
         letter.classList.add("visible");
     }
 }
@@ -115,7 +115,7 @@ function getLetterGuess() {
 }
 
 //Intercept all letter of the hidden word
-function getLetter() {
+function getLetters() {
     return document.getElementsByClassName("letter");
 }
 

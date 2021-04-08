@@ -1,17 +1,17 @@
 /**
  * Associated with each key on the keyboard 
- * checks if the chosen letter is present
+ * checks if the chosen letter is present,
  * the score conditions and the status of the keys and "hanged man"
  */
 function play() {
     //Number of letters guessed in one attempt
     let lettersGuessForAttempt = 0;
 
-    for (let i = 0; i < getLetter().length; i++) {
-        if (getLetter()[i].innerHTML === attemptLetter) {
-            getLetter()[i].classList.add("visible");
+    for (let i = 0; i < getLetters().length; i++) {
+        if (getLetters()[i].innerHTML === attemptLetter) {
+            getLetters()[i].classList.add("visible");
             lettersGuessForAttempt++;
-            if (getLetterGuess().length === getLetter().length) {
+            if (getLetterGuess().length === getLetters().length) {
                 setKeyboardDisabled();
                 setPlayButtonDisabled();
                 hideHangPart();
