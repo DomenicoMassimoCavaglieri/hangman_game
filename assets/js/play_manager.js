@@ -4,13 +4,15 @@
  * the score conditions and the status of the keys and "hanged man"
  */
 function play() {
+    
     //Number of letters guessed in one attempt
     let lettersGuessForAttempt = 0;
 
-    for (let i = 0; i < getLetters().length; i++) {
-        if (getLetters()[i].innerHTML === attemptLetter) {
-            getLetters()[i].classList.add("visible");
+    for (let letter of getLetters()) {
+        if (letter.innerHTML === attemptLetter) {
+            letter.classList.add("visible");
             lettersGuessForAttempt++;
+
             if (getLetterGuess().length === getLetters().length) {
                 setKeyboardDisabled();
                 setPlayButtonDisabled();
