@@ -4,11 +4,13 @@
  * the score conditions and the status of the keys and "hanged man"
  */
 function play() {
-    let LettersGuessForAttempt = 0;
+    //Number of letters guessed in one attempt
+    let lettersGuessForAttempt = 0;
+
     for (let i = 0; i < getLetter().length; i++) {
         if (getLetter()[i].innerHTML === attemptLetter) {
             getLetter()[i].classList.add("visible");
-            LettersGuessForAttempt++;
+            lettersGuessForAttempt++;
             if (getLetterGuess().length === getLetter().length) {
                 setKeyboardDisabled();
                 setPlayButtonDisabled();
@@ -22,7 +24,7 @@ function play() {
         document.getElementById(attemptLetter).setAttribute("disabled", true);
     }
 
-    if (LettersGuessForAttempt == 0) {
+    if (lettersGuessForAttempt == 0) {
         (strike--)
         switch (strike) {
             case 0:
