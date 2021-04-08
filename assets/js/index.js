@@ -17,8 +17,6 @@ let topic = 0;
 let wordsListIndex;
 
 
-
-
 //Initial Popup
 getPopMessage("pop-box-large", "Choose the topic", getPopMessageLarge());
 setPopButtonOnListening("pop-box-large");
@@ -27,9 +25,9 @@ setPopButtonOnListening("pop-box-large");
 getKeyboard();
 
 //Preparation the buttons in the play section
-getChangeWordButton();
-getChangeTopicButton()
-getResetScoredButton()
+setChangeWordButton();
+setChangeTopicButton()
+setResetScoredButton()
 
 //Disabled all buttons
 setKeyboardDisabled();
