@@ -4,22 +4,22 @@
 function getHiddenWordInTopic() {
     switch (topic) {
         case 1:
-            topicTitle = "ANIMALS";
+            printTopic("ANIMALS");
             return getHiddenWord(wordsJson, "animals");
         case 2:
-            topicTitle = "FRUITS&VEGETABLES";
+            printTopic("FRUITS&VEGETABLES");
             return getHiddenWord(wordsJson, "fruitsAndvegetables");
         case 3:
-            topicTitle = "SCHOOL TOOLS";
+            printTopic("SCHOOL TOOLS");
             return getHiddenWord(wordsJson, "school_tools");
         case 4:
-            topicTitle = "PART OF THE HOUSE";
+            printTopic("PART OF THE HOUSE");
             return getHiddenWord(wordsJson, "part_of_the_house");
         case 5:
-            topicTitle = "IN THE KITCHEN";
+            printTopic("IN THE KITCHEN");
             return getHiddenWord(wordsJson, "in_the_kitchen");
         default:
-            topicTitle = "FRUITS&VEGETABLES";
+            printTopic("FRUITS&VEGETABLES");
             return getHiddenWord(wordsJson, "fruitsAndvegetables");
     }
 }
@@ -84,11 +84,13 @@ function randomIndex(list) {
 
 //Print the title of the topic on the screen
 function printTopic(topic) {
-    let topicTitleNode = document.createElement("p");
-    let topicTitleTextNode = document.createTextNode(topic);
-    topicTitleNode.appendChild(topicTitleTextNode);
-    topicTitleNode.setAttribute("id", "topic-title");
-    getTitleContainer().appendChild(topicTitleNode);
+    if (!getTitleContainer().contains(getTopicTitle())) {
+        let topicTitleNode = document.createElement("p");
+        let topicTitleTextNode = document.createTextNode(topic);
+        topicTitleNode.appendChild(topicTitleTextNode);
+        topicTitleNode.setAttribute("id", "topic-title");
+        getTitleContainer().appendChild(topicTitleNode);
+    }
 }
 
 //Intercept the topic title

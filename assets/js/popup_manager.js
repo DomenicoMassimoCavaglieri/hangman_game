@@ -71,7 +71,6 @@ function setPopButtonOnListening(idPopMessageSize) {
             popMessageNode.childNodes[i].addEventListener("click", () => {
                 topic = i;
                 setupGame(getHiddenWordInTopic());
-                printTopic(topicTitle);
                 document.getElementById("main").removeChild(popMessageNode)
             });
         }

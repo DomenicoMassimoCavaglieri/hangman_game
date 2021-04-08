@@ -10,9 +10,6 @@ let strike = 4;
 //Attempt letter from keyboeard
 let attemptLetter = "";
 
-//The title of the topic
-let topicTitle = "";
-
 //Variable containing the number referring to the topic, chosen by the user
 let topic = 0;
 
