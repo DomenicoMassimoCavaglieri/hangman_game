@@ -33,7 +33,10 @@ setResetScoredButton()
 setKeyboardDisabled();
 setPlayButtonDisabled();
 
-
+/**
+ * Initial setup of the game
+ * @param {string} word 
+ */
 function setupGame(word) {
 
     printHiddenWord(word);

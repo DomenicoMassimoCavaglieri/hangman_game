@@ -61,7 +61,6 @@ function getHiddenWord(listOfWords, userTopic) {
         return "HELLO";
 }
 
-
 /**
  * Generates an index that is always different, based on array length
  * @param {array} list 
@@ -119,7 +118,6 @@ function getLetterGuess() {
 function getLetter() {
     return document.getElementsByClassName("letter");
 }
-
 
 /**
  * Given an array of individual letters, print the letters with their own style

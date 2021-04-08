@@ -10,7 +10,6 @@ function getPopMessageSmall() {
     return popMessageSmall;
 }
 
-
 /**
  * Generates pop-up messages with title and n button
  * @param {string} idPopMessageSize  (CSS id)
@@ -51,7 +50,6 @@ function getPopMessage(idPopMessageSize, title, messages) {
         }, 200
     );
 }
-
 
 /**
  * Listens to the button of the popup message and assigns each a specific function
